@@ -1,0 +1,58 @@
+<view class="price">畅打票</view>
+<!-- 原价门票 -->
+<view class="ticket">
+  <view class="original">
+    <view class="ticket1">原价门票</view>
+    <view class="discount">
+    无优惠散客门票，入场前出示二维码扫码后入场，原始门票购买时无经验加成，可购票。
+    </view>
+  </view>
+  <view class="tariff">{{price}}元</view>
+</view>
+<!-- 可用时间 -->
+<view class="available">可用时间:{{time}}可入场，{{describe}}有效</view>
+<!-- 付款部分 -->
+<view class="part">
+  <!-- 使用优惠券 -->
+  <navigator class="discount" url="../coupons/coupons" hover-class="none" open-type="redirect">
+    <view class="useit">使用抵扣券</view>
+    <view class="choice">
+      <!-- 优惠券部分 -->
+      <view class="portion">
+        <image src="../../image/wallet.png"></image>
+        <p>{{availableCoupons}}个可用</p>
+      </view>
+      <i class="iconfont icon-gengduo"></i>
+    </view>
+  </navigator>
+  <!-- 付款方式 -->
+  <view class="discount">
+    <view class="useit">付款方式</view>
+    <view class="choice">
+      <image src="{{img1}}"></image>
+    </view>
+  </view>
+  <!-- 购买数量 -->
+  <view class="discount">
+    <view class="useit">购买数量</view>
+    <view class="choice choice1">
+      <i bindtap="reduce" class="iconfont icon-jian"></i>
+      <span>{{num}}</span>
+      <i bindtap="plus" class="iconfont icon-jia"></i>
+    </view>
+  </view>
+  <!-- 订单总计 -->
+  <view class="discount">
+    <view class="useit">订单总计</view>
+    <view class="choice choice2">￥{{price * num}}</view>
+  </view>
+</view>
+<view class="amount">
+  <view class="money">￥{{price * num}}</view>
+  <view bindtap="payment">立即支付</view>
+</view>
+
+<!-- 模态框部分 -->
+<modal hidden="{{hiddenModal2}}" title="提示" bindconfirm="model2confirm" bindcancel="model2cancel">
+  <view class="fightfreely">入场一次畅打</view>
+</modal>

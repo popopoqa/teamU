@@ -1,0 +1,341 @@
+/* page {
+  background:#F8F8F8;
+} */
+page {
+  position: relative;
+}
+/* 顶部搜索部分 */
+.vessel .top{
+  font-size:30rpx;
+  background:#FFFFFF;
+  padding-bottom:20rpx;
+  display:flex;
+  align-items:center;
+}
+.vessel .top .position {
+  margin:0 30rpx;
+  color:#4A4A4A;
+}
+.vessel .top .search {
+  width:70%;
+  background:#F3F3F3;
+  border-radius:50rpx;
+  color:#9F9F9F;
+  padding:8rpx 0;
+  text-align: center;
+}
+/* 轮播部分 */
+swiper {
+  margin:20rpx 30rpx;
+}
+swiper swiper-item {
+  border-radius:15rpx;
+}
+swiper swiper-item image{
+  width:100%;
+}
+.wx-swiper-dots {
+  position: relative;
+  left: unset !important;
+  right: 0;
+}
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -5rpx;
+}
+.recommend {
+  margin-top:50rpx;
+  box-shadow:0 10rpx 15rpx #F4F4F4;
+  background:#FFFFFF;
+}
+.court1 {
+  color:#6D6D6D;
+  font-size:30rpx;
+  text-align:center;
+  padding:50rpx 0 50rpx 0;
+}
+.recommend .court {
+  font-size:30rpx;
+  padding:10rpx 0 10rpx 30rpx;
+}
+.recommend .court,
+.recommend .introduce {
+  border-bottom:1rpx solid #E1E1E1;
+}
+.recommend .introduce{
+  padding:30rpx;
+}
+.recommend .introduce image {
+  width:32%;
+  height:130rpx;
+  float:left;
+  margin-right:25rpx;
+}
+.recommend .introduce .detail {
+  margin-left:25rpx;
+}
+.recommend .introduce .detail .name {
+  font-size:28rpx;
+}
+.recommend .introduce .detail .price {
+  font-size:24rpx;
+  color:#5FC49C;
+  margin-top:10rpx;
+}
+.recommend .introduce .detail .evaluate {
+  font-size:22rpx;
+  margin-top:12rpx;
+  display:flex;
+}
+.recommend .introduce .detail .evaluate  .vip {
+  flex:1;
+}
+.recommend .introduce .detail .evaluate .vip span { 
+  margin-right:15rpx;
+  padding:5rpx 15rpx;
+  border-radius:20rpx;
+}
+.recommend .introduce .detail .evaluate .vip .savingsCard {
+  background:#FEF3C1;
+  color:#C39F49;
+}
+.recommend .introduce .detail .evaluate .vip .block {
+  background:#F9D9D2;
+  color:#CB8E80;
+}
+.recommend .introduce .detail .evaluate .vip .activity {
+  background:#D6E8FD;
+  color:#759BD0;
+}
+.recommend .introduce .detail .evaluate p {
+  font-size:28rpx;
+  color:#AAAAAA;
+}
+.suspensionWindow {
+  position: fixed;
+  bottom:180rpx;
+  right:0;
+  z-index:0;
+  border:1rpx solid #E0DFE0;
+  padding-left:5rpx;
+  border-top-left-radius:60rpx;
+  border-bottom-left-radius:60rpx;
+  background: #F3F3F3;
+}
+.suspensionWindow  .pic1 {
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  display:block;
+}
+.suspensionWindow image {
+  border-radius: 50%;
+}
+.suspensionWindow .pic2 {
+  filter: brightness(70%);
+}
+.suspensionWindow .app .msg {
+  font-size:26rpx;
+}
+.more {
+  color:#7B7B7B;
+  margin-top:30rpx;
+  font-size:26rpx;
+  text-align: center;
+  padding-bottom:120rpx;
+}
+.showmodel {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.3);
+  z-index:5;
+}
+.showmodel .coupon {
+  background: linear-gradient(to bottom,#FEC870,#FEA166);
+  width:73%;
+  margin:0 auto;
+  margin-top:260rpx;
+  border-radius:12rpx;
+  padding:20px 20rpx 40rpx 20rpx;
+}
+.showmodel .coupon .currency {
+  background:#FFFFFF;
+  vertical-align: center;
+  display:flex;
+  align-items: center;
+  padding:20rpx;
+  border-radius:12rpx;
+}
+.showmodel .coupon .currency image {
+  width:80rpx;
+  height:80rpx;
+}
+.showmodel .coupon .currency .redEnvelopes {
+  flex:1;
+}
+.showmodel .coupon .currency .redEnvelopes .envelops {
+  font-size:32rpx;
+  color:#030303;
+}
+.showmodel .coupon .currency .redEnvelopes .validity {
+  font-size:24rpx;
+  color:#A4453F;
+  margin-top:5rpx;
+  width:60%; 
+}
+.showmodel .coupon .currency .money {
+  color:#F30302;
+  float:right;
+}
+.showmodel .coupon button {
+  width:55%;
+  font-size:32rpx;
+  border-radius:40rpx;
+  margin-top:300rpx;
+  border:none;
+}
+
+.list-city {
+    position: relative;
+    background:#FFFFFF;
+}
+
+.py {
+    box-sizing: border-box;
+    background: #FAFAFA;
+    font-size: 23rpx;
+    color: #aaa;
+    padding: 10rpx 25rpx;
+}
+
+.fullname {
+    box-sizing: border-box;
+    font-size: 30rpx;
+    color: #555;
+    padding: 25rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.fullname .city{
+  color:#838385;
+  font-size:28rpx;
+}
+.fullname .city1 {
+  border: 1rpx solid #eee;
+  margin-top:25rpx;
+  padding: 10rpx 25rpx;
+  font-size: 25rpx;
+} 
+.city-py {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height:100%;
+    background:#B2B2B2;
+    opacity: 0.8;
+}
+
+.city-py view {
+    font-size: 24rpx;
+    width: 40rpx;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color:#FFFFFF;
+}
+.showPy {
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  line-height: 150rpx;
+  text-align: center;
+  font-size: 80rpx;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  color: #333;
+  box-shadow: 0 0 150rpx rgba(0, 0, 0, 0.35);
+}
+
+.hot-city {
+  border: 1rpx solid #eee;
+  display: inline-block;
+  margin: 25rpx 0 0 25rpx;
+  padding: 10rpx 25rpx;
+  font-size: 25rpx;
+}
+/* 绑定手机号 */
+.require {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.3);
+  z-index:99999;
+}
+.require .obtain {
+  width:80%;
+  height:300rpx;
+  color:#4C4C4C;
+  background:#FFFFFF;
+  position: absolute;
+  border-radius: 15rpx;
+  padding:20rpx 0 20rpx 0;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+.require .obtain .icon {
+  position:absolute;
+  top:-50rpx;
+  right:10rpx;
+}
+.require .obtain .icon i {
+  color:#FFFFFF;
+  font-size:36rpx;
+}
+.require .obtain .L_bind {
+  width:100%;
+  margin-top:30rpx;
+}
+.require .obtain .L_bind .bind {
+  width:90%;
+  margin:0 auto;
+  text-align: center;
+  margin-top:10rpx;
+  font-size:30rpx;
+}
+.require .obtain .L_bind .tieUp{
+  width:70%;
+  margin:0 auto;
+  background:#00D77A;
+  color:#FFFFFF;
+  font-size:36rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:60rpx;
+  margin-bottom:40rpx;
+  box-shadow:0 5rpx 10rpx 2rpx #E5E3E4;
+}
+.require .obtain .phone {
+  margin-top:50rpx;
+  font-size:28rpx;
+  color:#4C4A4D;
+  text-align: center;
+  padding-bottom:10rpx;
+}
+.L_distance {
+  margin-bottom:80rpx;
+}
+
+

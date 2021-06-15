@@ -1,0 +1,208 @@
+.container {
+  background:#27C589;
+  color:#FFFFFF;
+  padding-bottom:20rpx;
+}
+.day {
+  text-align: center;
+  font-size:30rpx;
+  padding-top:20rpx;
+}
+.sunday {
+  width:100%;
+  margin-top:20rpx;
+  font-size:26rpx;
+  display:flex;
+  justify-content: space-around;
+}
+.sunday .block {
+  text-align: center;
+}
+.sunday .block .time2 {
+  margin-top:10rpx;
+}
+.sunday .block .time1 .now1{
+  color:#27C589;
+  background:#FFFFFF;
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+  margin:0 auto;
+  line-height: 40rpx;
+}
+.room {
+  height:650rpx;
+  background:#F8F8F8;
+  position: relative;
+  background:#FFFFFF;
+}
+.room .price {
+  display:inline-block;
+}
+.room .price .games {
+  display:flex;
+  align-items:center;
+  margin-left:180rpx;
+}
+.room .price  .games .scene {
+  font-size:20rpx;
+  background: #FFFFFF;
+  padding:20rpx 0;
+  display:flex;
+  align-items: center;
+}
+.room .price  .games .optional1 {
+  text-align: center;
+  width:150rpx;
+  display:flex;
+}
+.room .price  .games .optional2 {
+  margin-right:15rpx;
+}
+.room .price  .games  .name {
+  width:80rpx;
+  text-align: center;
+  font-size: 16rpx;
+}
+.room .price  .games .scene .i {
+  background:#ffe3b8;
+  font-size:26rpx;
+  float:right;
+}
+.room .price  .options {
+  margin-top:20rpx;
+  height:650rpx;
+  width:100%;
+}
+.room .price  .options .options1 {
+  padding-bottom:150rpx;
+}
+.room .price  .options .options1 .optionstemp {
+  display:flex;
+  font-size:24rpx;
+  height:90rpx;
+  align-items:center;
+}
+.room .price .options .part {
+  width:150rpx;
+  margin-right: 10rpx;
+  margin-left:20rpx; 
+}
+.room .price .options .money {
+  width:122rpx;
+  height:90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius:20rpx;
+}
+.room .price .options .select {
+  background: #EDEFEE;
+}
+.room .price .options .optional {
+  background:#E86A49;
+}
+.room .price .options .notoptional {
+  background:#CDCFCE;
+}
+.sale {
+  margin:30rpx 50rpx 0 50rpx;
+  padding-bottom:30rpx;
+}
+.sale .part {
+  display:inline-block;
+  font-size:28rpx;
+  width:15%;
+  text-align: center;
+}
+.sale .part .span {
+  width:40rpx;
+  height:40rpx;
+  border:2rpx solid #676767;
+  margin:0 auto;
+  border-radius:5rpx;
+}
+.sale .part:nth-child(2) .span {
+  background: #EDEFEE;
+}
+.sale .part:nth-child(3) .span {
+  background: #E86A49;
+}
+.sale .part:nth-child(4) .span {
+  background: #CDCFCE;
+}
+.sale .part  p {
+  margin-top:10rpx;
+}
+.line {
+  height:2rpx;
+  border-top:1rpx solid #4F5150;
+}
+.sale .part .icon i{
+  background: #FFE3B8;
+}
+.order {
+  position:absolute;
+  bottom:10rpx;
+  right:20rpx;
+  display:flex;
+  font-size:30rpx;
+  align-items: center;
+} 
+.order .total {
+  color:#B96C66;
+}
+.order .confirm {
+  background: #27C589;
+  color:#FFFFFF;
+  padding:20rpx;
+  border-radius:10rpx;
+  margin-left:50rpx;
+}
+/* 点击事件 */
+.detail {
+  font-size:24rpx;
+  margin-top:20rpx;
+  height:300rpx;
+  width:52%;
+}
+.detail .block {
+  width:49%;
+  display: inline-block;
+}
+.detail .number {
+  margin:0 10rpx;
+}
+checkbox .wx-checkbox-input {
+  width:122rpx;
+  height:90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius:20rpx;
+}
+checkbox {
+  position: relative;
+}
+checkbox .money1 {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  text-align: center;
+}
+checkbox.notoptional .wx-checkbox-input {
+  background: #CDCFCE;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  background:#E86A49;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  opacity:0;
+}
+.fightfreely {
+  text-align: center;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}

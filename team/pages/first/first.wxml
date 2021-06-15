@@ -1,0 +1,18 @@
+
+
+<view class="bg1">
+  <image src="../../image/wx.png"></image>
+</view>
+
+<!-- 购票定场就用teamu -->
+<view class="title">
+  <view class="buyit">购票订场就用</view>
+  <view class="buyit">TeamU</view>
+</view>
+
+<!-- 登录授权部分 -->
+<view class="model">
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="border-radius:200rpx" disabled="{{disable}}">登录</button>
+</view>
+
+<view class="company">上海枭甸网络科技有限公司</view>

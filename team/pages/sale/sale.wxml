@@ -1,0 +1,106 @@
+<view class="container">
+  <view class="data">
+    <view class="day">{{time1}}</view>
+    <view class="sunday" >
+      <view class="block" wx:for="{{aweek}}" wx:key="index">
+        <view class="time1">{{item.day}}</view>
+        <view class="time1 time2"> 
+          <view class="{{currentTime == item.currentTime?'now1':'now'}}"  bindtap="click"  data-time= "{{item.currentTime}}">{{item.date}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<scroll-view class="room" scroll-X="true">
+  <view class="price">
+    <!-- 获取场次 -->
+    <view  wx:for="{{list}}" wx:key="index">
+      <view class="games" wx:if="{{index==0}}">
+        <view wx:for="{{item.blocks}}" wx:key="index"  class="scene {{item.situation?'optional1':'optional2'}}">
+          <view class="name">{{item.basketryName}}</view>
+          <view class="i"  wx:if="{{item.situation}}"><i class="iconfont icon-quanchang"></i></view>
+        </view>
+      </view>
+    </view>
+    <scroll-view class="options" scroll-Y="true">
+      <checkbox-group class="options1" bindchange="msg">
+        <view class="optionstemp" wx:for="{{list}}"  wx:for-index="prindex" wx:key="index">
+            <view class="part">{{item.startTime}} - {{item.stopTime}}</view>
+            <label wx:for="{{item.blocks}}" wx:key="index">
+              <view wx:if="{{item.basketryFlag == true}}">
+                <checkbox class="money select" disabled/>
+              </view>
+              <view wx:else>
+                 <view wx:if="{{item.basketryState == 1}}">
+                  <view wx:if="{{item.options}}">
+                    <view wx:if="{{num == null}}">
+                      <checkbox value="{{index}},{{prindex}},{{item.basketryName}},{{item.shortTime}},{{item.price}},{{item.id}}" class="money">
+                        <view class="money1">{{item.price}}</view>
+                      </checkbox>
+                    </view>
+                    <view wx:else>
+                      <view wx:if="{{index == num || index == num1}}">
+                        <view wx:if="{{index == num  && prindex==num2 }}">
+                          <checkbox  value="{{index}},{{prindex}},{{item.basketryName}},{{item.shortTime}},{{item.price}},{{item.id}}" class="money"  checked>
+                            <view class="money1">{{item.price}}</view>
+                          </checkbox>
+                        </view>
+                        <view wx:else>
+                          <checkbox  value="{{index}},{{prindex}},{{item.basketryName}},{{item.shortTime}},{{item.price}},{{item.id}}" class="money">
+                              <view class="money1">{{item.price}}</view>
+                          </checkbox>
+                        </view>
+                      </view>
+                      <view wx:else>
+                        <checkbox  value="{{index}},{{prindex}},{{item.basketryName}},{{item.shortTime}},{{item.price}},{{item.id}}" class="money notoptional" disabled>
+                          <view class="money1">{{item.price}}</view>
+                        </checkbox>
+                      </view>
+                    </view>
+                  </view>
+                  <view wx:else>
+                    <checkbox class="money select" disabled/>
+                  </view>
+                </view>
+                <view wx:elif="{{item.basketryState == 2 || item.basketryState == 3}}">
+                  <checkbox  class="notoptional money" disabled />
+                </view>
+                <view wx:else>
+                  <checkbox class="money select" disabled/>
+                </view>
+              </view>
+            </label>
+        </view>
+      </checkbox-group>
+    </scroll-view>
+  </view>
+</scroll-view>
+<view class="sale">
+  <view class="part" wx:for="{{name}}" wx:key="index">
+    <view class="icon" wx:if="{{index == 4}}">
+      <i class="iconfont icon-quanchang"></i>
+    </view>
+    <view class="span" wx:else></view>
+    <p>{{item}}</p>
+  </view>
+</view>
+<view class="line"></view>
+<!-- 点击事件 -->
+<scroll-view scroll-X="true" scroll-Y="true">
+  <view class="detail">
+    <view class="block" wx:for="{{array}}" wx:key="index">
+      <span class="number">{{item}}</span>
+    </view>
+  </view>
+</scroll-view>
+<view class="order">
+  <view class="total" wx:if="{{totalmoney}}">合计{{totalmoney}}元</view>
+  <view class="total" wx:else>合计0元</view>
+  <view class="confirm" bindtap="information">确认下单</view>
+</view>
+<!-- 模态框部分 -->
+<view wx:if= "{{name1 == 'AJ  Club室内篮球场'}}">
+  <modal hidden="{{hiddenModal2}}" title="提示" bindconfirm="model2confirm" bindcancel="model2cancel">
+  <view class="fightfreely" >AJ预定场地需要同时购买畅打票</view>
+</modal>
+</view>

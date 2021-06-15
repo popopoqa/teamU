@@ -1,0 +1,23 @@
+<view class="historyList">
+  <!-- tab部分 -->
+  <view class="history-tab">
+    <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}">
+    <text>{{item}}</text>
+    </view>
+  </view>
+  <view class="history-content" wx:if="{{blockDtoList.length}}">
+    <view class="history-list-content" wx:for="{{blockDtoList}}" wx:key="index">
+      <view class="history-left">
+        <view class="history-park-name">{{item.shopName ?  item.shopName : item.basketBllName}}</view>
+        <view class="history-ticket-type">{{item.name ? item.name : item.blockName}}</view>
+        <view class="history-park-time">使用时间：{{item.updateTime ? item.updateTime : item.time + ' ' + item.startTime}}</view>
+      </view>
+      <navigator class="history-right" wx:if="{{currentTab == '0'}}" url="../historyTicket/historyTicket?ticketNo={{item.ticketNo}}&&shopId={{item.shopId}}&&currentTab={{currentTab}}" hover-class="none">门票</navigator>
+      <navigator class="history-right" wx:if="{{currentTab == '1'}}" url="../historyTicket/historyTicket?ticketNo={{item.blockNo}}&&shopId={{item.shopId}}&&currentTab={{currentTab}}" hover-class="none">门票</navigator>
+      <navigator class="history-right" wx:if="{{currentTab == '2'}}" url="../historyTicket/historyTicket?ticketNo={{item.cardNumber}}&&shopId={{item.shopId}}&&currentTab={{currentTab}}" hover-class="none">门票</navigator>
+    </view>
+  </view>
+  <view  class="history-content history-no-ticket" wx:else>
+    暂无相关门票
+  </view>
+</view>

@@ -1,0 +1,65 @@
+<view class="members">
+  <view class="card">
+    <view class="vip">{{list.name}}</view>
+    <view class="test">{{list.shopName}}</view>
+  </view>
+  <view class="photo"><image src="{{list.shopImg}}"></image></view>
+</view>
+<!-- 会员卡部分 -->
+<view class="container">
+  <view class="card">
+    <view class="cd"></view>
+    <p>会员卡</p>
+  </view>
+  <!-- 选择二维码 -->
+  <view class="brake" wx:if="{{gateBrake}}">
+    <view class="{{checked1?'false':'true'}}" bindtap="checked1">闸机二维码</view>
+    <view class="{{checked1?'true':'false'}}" bindtap="checked2">前台二维码</view>
+  </view>
+  <!-- 二维码部分 -->
+  <view class="code">
+    <canvas style="width:400rpx;height: 400rpx;background:#f1f1f1;"  canvas-id="mycanvas"/>
+  </view>
+  <view class="order" style="color:#6B6B6B;font-size:28rpx;margin-top:0;text-align:center;">{{ticketNo}}</view>
+  <view class="time" wx:if="{{sec < 10 && minutes < 10}}">{{min + minutes}}:{{min + sec}}</view>
+  <view class="time" wx:elif="{{minutes < 10 && sec > 9}}">{{min + minutes}}:{{sec}}</view>
+  <view class="time" wx:elif="{{minutes > 9 && sec < 10}}">{{minutes}}:{{min + sec}}</view>
+  <view class="time" wx:else>{{minutes}} : {{sec}}</view>
+  <view class="update">二维码已于{{currentTime}}更新</view>
+</view>
+<view class="yearCard">
+  <p class="card">畅打有效期</p>
+  <span class="{{annualCard ? 'annual' : 'open'}}">{{describe}}</span>
+</view>
+<view class="yearCard"  wx:if="{{message.balance}}">
+  <p class="card">余额</p>
+  <p class="open money">{{message.balance}}元</p>
+</view>
+<!-- 消费记录 -->
+<view class="record" wx:if="{{message.balance}}">
+  <view class-="coustomer">消费记录</view>
+  <view wx:if="{{walletRecords.length > 4}}">
+    <view class="records">
+      <view class="detail" wx:for="{{walletRecords}}" wx:key="index">
+        <view class="name">{{item.shopName}}-{{item.content}}</view>
+        <view class="situation">
+          <p class="time">{{item.recordTime}}</p>
+          <p class="money">{{item.price}}元</p>
+        </view> 
+      </view>
+    </view>
+    <navigator class="lookat" url="../consumptionc/consumptionc" hover-class="none">点击查看更多</navigator>
+  </view>
+  <view wx:else>
+    <view class="detail" wx:for="{{walletRecords}}" wx:key="index">
+        <view class="name">{{item.shopName}}-{{item.content}}</view>
+        <view class="situation">
+          <p class="time">{{item.recordTime}}</p>
+          <p class="money">{{item.price}}元</p>
+        </view> 
+      </view>
+  </view>
+</view>
+
+
+ 

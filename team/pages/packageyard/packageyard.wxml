@@ -1,0 +1,69 @@
+
+
+<view class="members">
+  <view class="card">
+    <view class="vip">{{ballCourtTicketDto.ticketName}}</view>
+    <view class="test">包场时间：{{time}}</view>
+    <view  wx:for="{{blockList}}" wx:key="index">
+      <view class="test">
+      <span>{{item.startTime}} - {{item.stopTime}}</span>
+      <span class="test1">{{item.basketryName}}</span>   
+      </view>
+    </view>
+    <view class="test">{{ballCourtTicketDto.ballCourtName}}</view>
+  </view>
+  <view class="photo"><image src="{{ballCourtTicketDto.ballCourtImg}}"></image></view>
+</view>
+<!-- 会员卡部分 -->
+<view class="container">
+  <view class="card">
+    <view class="cd"></view>
+    <p>预定包场</p>
+  </view>
+   <!-- 选择二维码 -->
+  <view class="brake" wx:if="{{ballCourtTicketDto.gateBrake}}" >
+    <view class="{{checked1?'false':'true'}}" bindtap="checked1">闸机二维码</view>
+    <view class="{{checked1?'true':'false'}}" bindtap="checked2">前台二维码</view>
+  </view>
+  <!-- 二维码部分 -->
+  <view class="code">
+    <!-- <image src="{{imagePath}}" style="width:400rpx;height:400rpx;display:block;margin:0 auto;"></image> -->
+    <!-- <canvas style="width:400rpx;height:400rpx;background:#f1f1f1;position:fixed;top:9099999rpx" canvas-id="mycanvas1"/> -->
+    <canvas style="width:400rpx;height:400rpx;background:#f1f1f1;" canvas-id="mycanvas1"/> 
+    <view class="text">{{ballCourtTicketDto.ticketNo}}</view>
+  </view>
+</view>
+<!-- 统计部分 -->
+<view class="statistics" bindtap="callphone">
+  <view class="test">
+    <view class="census">{{ballCourtTicketDto.shopName}}</view>
+    <view class="address">{{ballCourtTicketDto.shopAddress}}</view>
+  </view>
+  <view class="icon"><i class="iconfont icon-dianhua1"></i></view>
+</view>
+<view class="statistics statistics1">
+  <view class="test">
+    <view class="census">实付金额</view>
+    <view class="address">订单编号:{{ballCourtTicketDto.orderNo}}</view>
+     <view class="address">购买时间:{{ballCourtTicketDto.createTime}}</view>
+  </view>
+  <view class="number">{{ballCourtTicketDto.actualPrice}}元</view>
+</view>
+<view class="statistics statistics2">
+  <view class="test">
+    <view class="census">说明</view>
+    <view class="address">到球场出示此页面二维码完成验证，可截图转让或分享，一张门票仅可使用一次。</view>
+  </view>
+</view>
+
+<button class="share"  bindtap="shareCanvas">门票转让给好友</button>
+<!-- 生成二维码图片 -->
+
+<view  wx:if="{{shareCanvas}}" class="poster">
+  <!-- <image src="{{filePath}}" class="shareCanvas"></image> -->
+  <view class="shareCanvas"></view>
+  <button bindtap="baocun">保存图片并转发给好友</button>
+  <view class="icon" bindtap="del">
+    <i class="iconfont icon-quxiao1"></i>
+  </view>
+</view>

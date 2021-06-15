@@ -1,0 +1,169 @@
+page {
+  background:#ECF1F7;
+}
+.members {
+  color:#FFFFFF;
+  background: -webkit-linear-gradient(left,#FFC770,#FD9D60);
+  display: flex;
+  height:180rpx;
+  padding-top:20rpx;
+  margin:30rpx 30rpx 0 30rpx;
+  border-radius:20rpx;
+}
+.members .card {
+  margin-left:30rpx;
+  flex:1
+}
+.members .card .vip {
+  font-size:32rpx;
+}
+.members .card .test {
+  font-size:28rpx;
+  margin-top:40rpx;
+}
+.members .photo {
+  padding:8rpx;
+  background:#FFFFFF;
+  width:200rpx;
+  height:120rpx;
+  margin-right:20rpx;
+}
+.members .photo image {
+  width:200rpx;
+  height:120rpx;
+  margin-right:30rpx;
+}
+/* 会员卡部分 */
+.container {
+  background:#FFFFFF;
+  border-radius:20rpx;
+  margin:0 30rpx;
+  padding:30rpx 0;
+}
+.container .card {
+  display: flex;
+  align-items: center;
+  margin-left:30rpx;
+}
+.container .card .cd{
+  width:20rpx;
+  height:20rpx;
+  background:#FF5000;
+  border-radius:50%;
+}
+.container .card p {
+  font-size:30rpx;
+  margin-left:20rpx;
+  color:#FF5200;
+}
+.container .code  {
+  margin-top:20rpx;
+  position: relative;
+}
+.container .code canvas{
+  display: block;
+  margin:0 auto;
+}
+.container .order,
+.container .time,
+.container .update {
+  text-align: center;
+}
+.container .order {
+  font-size:26rpx;
+  color:#616161;
+  margin-top:10rpx;
+}
+.container .time,
+.container .update {
+  color:#CE1727;
+  font-size:24rpx;
+  margin-top:10rpx;
+}
+.yearCard {
+  margin:0 30rpx;
+  background:#FFFFFF;
+  border-radius:20rpx;
+  border-top:1rpx solid #EDECF1;
+  font-size:30rpx;
+  height:80rpx;
+  line-height: 80rpx;
+}
+.yearCard .card {
+  margin-left:30rpx;
+  color:#696969;
+}
+.yearCard .open,
+.yearCard .annual{
+  float:right;
+  margin-right: 30rpx;
+}
+.yearCard .open {
+  color:#F80402;
+}
+.yearCard .annual {
+  font-size:26rpx;
+  color:#696969;
+}
+.yearCard .money {
+  color:#696969;
+}
+/* 消费记录 */
+.record {
+  background:#FFFFFF;
+  margin:0 30rpx 30rpx 30rpx;
+  border-radius: 20rpx;
+  border-top:1rpx solid #EDECF1;
+  padding:20rpx 30rpx 40rpx 30rpx;
+}
+.record .records {
+  height:400rpx;
+  overflow: hidden;
+}
+.record .coustomer {
+  text-align: center;
+  font-size:30rpx;
+}
+.record .detail {
+  margin-top:20rpx;
+  font-size:26rpx;
+  color:#696969;
+}
+.record .detail .situation {
+  margin-top:10rpx;
+}
+.record .detail .situation .money {
+  float:right;
+}
+.record .lookat {
+  text-align:center;
+  font-size:26rpx;
+  margin-top:20rpx;
+}
+.brake {
+  width:50%;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-around;
+  font-size:24rpx
+}
+.brake view{
+   padding:5rpx 10rpx;
+   border-radius:25rpx;
+}
+.brake .true {
+  color:#FFFFFF;
+  background:#00C679;
+}
+.brake .false {
+   color:#696969;
+  background:#EEEEEE;
+}
+.L_cover {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.2)
+} 

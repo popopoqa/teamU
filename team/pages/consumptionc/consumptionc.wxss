@@ -1,0 +1,15 @@
+.container {
+  color:#5A5A5A;
+  margin:0 30rpx;
+}
+.container .name{
+  font-size:30rpx;
+}
+.container .time {
+  font-size:24rpx;
+  display:flex;
+  margin-top:5rpx;
+}
+.container .time .date {
+  flex:1;
+}

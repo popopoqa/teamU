@@ -1,0 +1,22 @@
+<view wx:if="{{list.length}}" class="couponList">
+  <view  class="{{option?'cur coupon':'coupon'}}">
+    <view class="coupon1" wx:for="{{list}}" wx:key="index" bindtap="revert">
+      <view class="money">
+        <view>{{item.money}}元</view>
+        <view>满{{item.money}}减</view>
+      </view>
+      <view class="give">
+        <view>
+          <p>{{item.couponsName}}</p>
+        </view>
+        <view>{{item.shop.shopName}}</view>
+        <view>有效期：{{item.expiryTime}}</view>
+      </view>
+    </view>
+    <view class="envelopes" bindtap="recurrence">不使用红包</view>
+  </view>
+</view>
+<view wx:else>
+  <view class="coupon2">暂时没有优惠券啊</view>
+</view>
+

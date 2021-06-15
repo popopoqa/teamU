@@ -1,0 +1,24 @@
+
+<view class="coupon" wx:for="{{list}}" wx:key="index" bindtap="confirm">
+  <view class="money" wx:if="{{item.satisfyMoney}}">
+    <view>{{item.money}}元</view>
+    <view>满{{item.satisfyMoney}}减</view>
+  </view>
+  <view class="money" wx:else>
+    <view>{{item.money}}元</view>
+    <view>满{{item.money}}减</view>
+  </view>
+  <view class="give">
+    <view>
+      <p>{{item.couponsName}}</p>
+    </view>
+    <view>{{item.shop.shopName}}</view>
+    <view>有效期：{{item.expiryTime}}</view>
+  </view>
+</view>
+
+<view class="more">没有更多优惠券了？快去门店领取吧</view>
+
+<navigator class="bottom"  url="../historicalCoupons/historicalCoupons" hover-class="none">
+  <button class="history"  hover-class="none">历史代金券</button>
+</navigator>

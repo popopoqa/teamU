@@ -1,0 +1,342 @@
+page {
+  background:#F8F8F8;
+
+}
+.detailInformation .picture {
+  position:relative;
+}
+.detailInformation .picture .image{
+  width:100%;
+  height:350rpx;
+}
+.detailInformation .picture .image image {
+  width:100%;
+}
+.detailInformation .picture .store {
+  width:100%;
+  position:absolute;
+  bottom:4%;
+  color:#FFFFFF;
+  font-size:30rpx;
+}
+.detailInformation .picture .store .name {
+  margin-left:30rpx;
+}
+.detailInformation .picture .store .number {
+  float:right;
+  margin-right:30rpx;
+}
+.detailInformation .store1 {
+  font-size:28rpx;
+  padding:0 30rpx;
+  height:90rpx;
+  border-bottom:1rpx solid #E1E1E1;
+  background:#FFFFFF;
+  display:flex;
+  align-items: center;
+}
+.detailInformation .store1 .ownedStores{
+  display:flex;
+  align-items: center;
+  flex:1;
+}
+.detailInformation .position .address image,
+.detailInformation .store1 .ownedStores image {
+  width:30rpx;
+  height:30rpx;
+  vertical-align: middle;
+}
+.detailInformation .store1 .ownedStores .name {
+  align-items: center;
+  margin-left:20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:400rpx;
+}
+.detailInformation .store1 .icon-gengduo {
+  float:right;
+}
+.detailInformation .store1 .distance {
+  float:right;
+}
+.detailInformation .store1 .icon-dianhua1 {
+  float:right;
+  color:#2AD495;
+  font-size:40rpx;
+}
+/* L-card */
+.detailInformation .L-card {
+  width:100%;
+}
+.detailInformation .membership {
+  position:relative;
+  width:100%;
+}
+.detailInformation .membership image{
+  width:100%;
+  height:180rpx;
+  margin-top:10rpx;
+}
+.detailInformation .membership .memberCard {
+  position:absolute;
+  top:30rpx;
+  left:30rpx;
+  color:#FFFFFF;
+}
+.detailInformation .membership .memberCard  {
+  display:flex;
+}
+.detailInformation .membership .memberCard .column {
+  color:#F4BF05;
+  margin-left:30rpx;
+  margin-top:30rpx;
+}
+.detailInformation .membership .memberCard .column .card {
+  font-size:30rpx;
+}
+.detailInformation .membership .memberCard .column .scene {
+  margin-top:10rpx;
+  font-size:26rpx;
+  display:inline-block;
+}
+.detailInformation .membership .memberCard .column .scene .delivery {
+  border:1rpx solid #F4D12B;
+  padding:0 10rpx;
+  border-radius:5rpx;
+}
+.detailInformation .membership .memberCard .join {
+  position:absolute;
+  color:#FFFFFF;
+  background: #D9AA5A;
+  font-size:26rpx;
+  height:40rpx;
+  border-radius:6rpx;
+  padding:5rpx 10rpx;
+  top:40rpx;
+  left:570rpx;
+  width:70rpx;
+  text-align: center;
+}
+.detailInformation .online {
+  background:#FFFFFF;
+  margin-top:20rpx;
+}
+.detailInformation .online .buy {
+  font-size:28rpx;
+  border-bottom:1rpx solid #E1E1E1;
+  padding:20rpx 30rpx;
+}
+.detailInformation .online .onlineticket {
+  padding:20rpx 30rpx 30rpx 30rpx;
+  display: flex;
+  border-bottom:1rpx solid #E1E1E1;
+}
+.detailInformation .online .onlineticket .ticket {
+  flex:1;
+}
+.detailInformation .online .onlineticket .ticket .group image {
+  width:30rpx;
+  height:30rpx;
+  vertical-align: middle;
+}
+.detailInformation .online .onlineticket .ticket .group p {
+  font-size:28rpx;
+}
+.detailInformation .online .onlineticket .ticket .group .p1 {
+  margin:0 15rpx;
+}
+.detailInformation .online .onlineticket .ticket .time {
+   font-size:24rpx;
+   margin-top:4rpx;
+}
+.detailInformation .online .onlineticket .ticket .time .p2 {
+  margin-right:15rpx;
+}
+.detailInformation .online .onlineticket .purchase {
+  font-size: 24rpx;
+}
+.detailInformation .online .onlineticket .purchase .buyit{
+  color:#FFFFFF;
+  background: #24C68B;
+  padding:10rpx 25rpx;
+  border-radius:20rpx;
+}
+.detailInformation .online .onlineticket .purchase .price {
+  float:right;
+  color:#24C68B;
+}
+.detailInformation .online .onlineticket .ticket .group span {
+  font-size:24rpx;
+  background: #FFE3E7;
+  color:#C4848B;
+  padding:0 8rpx;
+  border-radius:6rpx;
+}
+.detailInformation .storedetail {
+  background:#FFFFFF;
+  font-size:24rpx;
+  padding-bottom:60rpx;
+  margin:20rpx 0 50rpx 0;
+}
+.detailInformation .storedetail .detail {
+  padding:20rpx 30rpx;
+  border-bottom:1rpx solid #E1E1E1;
+  font-size: 28rpx;
+}
+.detailInformation .storedetail .species {
+  padding:0 30rpx;
+}
+.detailInformation .storedetail .species .shop,
+.detailInformation .storedetail .species .shop1 {
+  display: inline-block;
+  width:33.333333%;
+  margin-top:30rpx; 
+  font-size:28rpx;
+}
+.detailInformation .storedetail .species .shop1 {
+  text-decoration: line-through;
+  COLOR:#9B9B9B;
+}
+.detailInformation .storedetail .species .shop1 span,
+.detailInformation .storedetail .species .shop span {
+  margin-left:20rpx;
+}
+.detailInformation .storedetail .species .shop1 i,
+.detailInformation .storedetail .species .shop i {
+  margin-top:8rpx;
+}
+/* 判断一下是否登录 */
+.L_isLogins {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.5);
+}
+.L_isLogin {
+  position:fixed;
+  bottom:20rpx;
+  width:100%;
+}
+.L_isLogin button {
+  width:40%;
+  color:#fff;
+  background: #00D77A;
+  box-shadow: 0 0 2rpx 2rpx #E5E3E4;
+  border-radius: 45rpx;
+  font-size:32rpx;
+}
+/* 绑定手机号 */
+.require {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.2);
+  z-index:10;
+}
+.require .obtain {
+  width:80%;
+  height:300rpx;
+  color:#4C4C4C;
+  background:#FFFFFF;
+  position: absolute;
+  border-radius: 15rpx;
+  padding:20rpx 0 20rpx 0;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+.require1 .obtain {
+  width:80%;
+  height:240rpx;
+  color:#4C4C4C;
+  background:#FFFFFF;
+  position: absolute;
+  border-radius: 15rpx;
+  padding:20rpx 0 20rpx 0;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+.require .obtain .icon {
+  position:absolute;
+  top:-50rpx;
+  right:10rpx;
+}
+.require .obtain .icon i {
+  color:#FFFFFF;
+  font-size:36rpx;
+}
+.require .obtain .L_bind {
+  width:100%;
+  margin-top:30rpx;
+}
+.require .obtain .L_bind .bind {
+  width:90%;
+  margin:0 auto;
+  text-align: center;
+  margin-top:10rpx;
+  font-size:30rpx;
+}
+.require .obtain .L_bind .tieUp{
+  width:70%;
+  margin:0 auto;
+  background:#00D77A;
+  color:#FFFFFF;
+  font-size:36rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:60rpx;
+  margin-bottom:40rpx;
+  box-shadow:0 5rpx 10rpx 2rpx #E5E3E4;
+}
+.require .obtain .L_bind .tieUp{
+  width:60%;
+}
+.require .obtain .phone {
+  margin-top:50rpx;
+  font-size:28rpx;
+  color:#4C4A4D;
+  text-align: center;
+  padding-bottom:10rpx;
+}
+.suspensionWindow {
+  position: fixed;
+  bottom:310rpx;
+  right:0;
+  z-index:0;
+  border:1rpx solid #E0DFE0;
+  padding-left:5rpx;
+  border-top-left-radius:60rpx;
+  border-bottom-left-radius:60rpx;
+  background: #F3F3F3;
+}
+.suspensionWindow  .pic1 {
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  display:block;
+}
+.suspensionWindow image {
+  border-radius: 50%;
+}
+.suspensionWindow1 {
+  position: fixed;
+  bottom:180rpx;
+  right:0;
+  z-index:0;
+  border:1rpx solid #E0DFE0;
+  padding-left:5rpx;
+  border-top-left-radius:60rpx;
+  border-bottom-left-radius:60rpx;
+  background: #F3F3F3;
+}

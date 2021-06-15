@@ -1,0 +1,66 @@
+page {
+  background: #F8F8F8;
+  position:relative;
+}
+.couponList {
+  margin-top:50rpx;
+}
+.coupon .envelopes {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  text-align: center;
+  font-size:30rpx;
+  border-top:2rpx solid #DDDDDD;
+  padding:30rpx 0;
+  color:#6A6A6A;
+  background: #FFFFFF;
+}
+.coupon1 {
+  background:#FFFFFF;
+  margin:30rpx 0 0 30rpx;
+  padding:30rpx;
+  border-radius:12rpx;
+}
+.coupon1>.money {
+  float:left;
+  color:#69C57A;
+  border-right: 1rpx solid #C4C4C4;
+  padding-right:30rpx;
+  margin-right:10rpx;
+  padding:10rpx 30rpx 10rpx 0;
+  text-align: center;
+}
+.coupon1>.money>view {
+  font-size:32rpx;
+}
+.coupon1>.money>view:nth-child(2) {
+  font-size:26rpx;
+  margin-top:20rpx;
+}
+.give {
+  padding-left:10rpx;
+}
+.coupon1 .give view:nth-child(1) {
+  font-size:32rpx;
+}
+.coupon1 .give view {
+  margin-top:10rpx;
+  font-size:26rpx;
+  display:flex;
+  align-items: center;
+}
+.coupon1 .give view span {
+  margin-left:30rpx;
+  font-size:24rpx;
+  color:#DE151D;
+}
+.cur {
+  opacity: 0.4;
+}
+.coupon2 {
+  margin-top:500rpx;
+  text-align: center;
+  color:#6D6D6D;
+  font-size:30rpx;
+}

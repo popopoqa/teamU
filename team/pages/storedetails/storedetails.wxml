@@ -1,0 +1,261 @@
+<view class="detailInformation">
+  <!-- 头部介绍 -->
+  <view class="picture" >
+    <swiper class="image">
+      <block  wx:key="index" wx:for="{{background}}">
+        <swiper-item bindtap="select">
+          <image src="{{item.img}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="store">
+      <span class="name">
+        {{name}}
+      </span>
+      <span class="number">{{background.length}}张</span>
+    </view>
+  </view>
+  <!-- 定位 -->
+  <view class="store1" bindtap="getmsg">
+    <view class="ownedStores">
+      <image src="{{img3}}" />
+      <view class="name">{{shop.address}}</view>
+    </view>
+    <view class="distance">
+      <!-- <p>{{distance}}</p> -->
+      <i class="iconfont icon-gengduo"></i>
+    </view>
+  </view>
+  <!-- 联系方式 -->
+  <view class="store1" bindtap="callGetPhone">
+    <view class="ownedStores">
+      <image src="{{img4}}"></image>
+      <span class="name">联系方式：{{shop.legalPersonPhone}}</span>
+    </view>
+    <i class="iconfont icon-dianhua1"></i>
+  </view>
+  <!-- 优惠券领取 -->
+  <view wx:if="{{globalData}}">
+     <navigator class="store1" url="../coupon/coupon?shopId={{shopId}}" hover-class="none">
+      <view class="ownedStores">
+        <image src="{{img2}}"></image>
+        <span class="name">优惠券领取</span>
+      </view>
+      <i class="iconfont icon-gengduo"></i>
+    </navigator>
+  </view>
+  <view wx:else>
+    <navigator class="store1" url="../first/first" hover-class="none">
+      <view class="ownedStores">
+        <image src="{{img2}}"></image>
+        <span class="name">优惠券领取</span>
+      </view>
+      <i class="iconfont icon-gengduo"></i>
+    </navigator>
+  </view>
+ 
+  <!-- 会员卡部分 -->
+  <view wx:if="{{publicSavingsCards.length}} || {{publicVips.length}}" class="L-card">
+    <view wx:if="{{publicVips.length}}" >
+      <view wx:for="{{publicVips}}" wx:key="index">
+        <navigator class="membership" url="../confirm/confirm?id={{item.id}}&&type=3&&shopId={{item.shopId}}&&city={{shop.city}}" hover-class="none">
+          <image src="{{img5}}"></image>
+          <view class="memberCard"> 
+            <view class="column">
+              <view class="card">会员卡</view>
+              <view class="scene" wx:for="{{publicSavingsCards}}" wx:key="index">
+                <span class="number" wx:if="{{item.status}}">{{item.hourlyPrice}}元/次</span>
+                <span class="number" wx:else>{{item.hourlyPrice}}元/小时</span>
+                <span class="delivery" wx:if="{{item.status}}" style="margin-left:10rpx;">满送</span>
+              </view>
+              <view class="scene" wx:if="{{membership.length}} && {{publicSavingsCards.length}}" style="margin:0 5rpx">或</view>
+              <view class="scene" wx:for="{{membership}}" wx:key="index">
+                <span class="number">{{item.price}}</span>
+                <span class="number" wx:if="{{item.type == 1}}">元/月</span>
+                <span class="number" wx:if="{{item.type == 2}}">元/季</span>
+                <span class="number" wx:if="{{item.type == 3}}">元/半年</span>
+                <span class="number" wx:if="{{item.type == 4}}">元/年</span>
+              </view>
+            </view>
+            <view class="join">充值</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view wx:else>
+      <view wx:for="{{publicSavingsCards}}" wx:key="index">
+        <navigator class="membership" url="../confirm/confirm?id={{item.id}}&&type=4&&shopId={{item.shopId}}&&city={{shop.city}}" hover-class="none">
+          <image src="{{img5}}"></image>
+          <view class="memberCard"> 
+            <view class="column">
+              <view class="card">会员卡</view>
+              <view class="scene" wx:for="{{publicSavingsCards}}" wx:key="index">
+                <span class="number" wx:if="{{item.status}}">{{item.hourlyPrice}}元/次</span>
+                <span class="number" wx:else>{{item.hourlyPrice}}元/小时</span>
+                <span class="delivery" wx:if="{{item.status}}" style="margin-left:10rpx;">满送</span>
+              </view>
+            </view>
+            <view class="join">充值</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+    
+  <!-- 在线购票 -->
+  <view class="online">
+    <view class="buy">在线购票</view>
+    <view wx:if="{{publicTicketList.length}}">
+      <view wx:for="{{publicTicketList}}" wx:key="index">
+      <view wx:if="{{globalData}}">
+        <navigator class="onlineticket" url="../order/order?id={{item.id}}&&city={{shop.city}}&&name={{name1}}" hover-class="none"  wx:key="index">
+          <view class="ticket">
+            <view class="group">
+              <image src="{{img6}}"></image>
+              <p class="p1">{{item.gateName}}</p>
+            </view>
+            <view class="time">
+              <p class="p2">{{item.describe}}</p>
+              <p class="p3">入场时间{{item.startTime}}至{{item.stopTime}}</p>
+            </view>
+          </view>
+          <view class="purchase">
+            <view class="buyit">购票</view>
+            <view class="price">￥{{item.price}}</view>
+          </view>
+        </navigator>
+      </view>
+      <view wx:else>
+        <navigator class="onlineticket" url="../first/first" hover-class="none"  wx:key="index">
+          <view class="ticket">
+            <view class="group">
+              <image src="{{img6}}"></image>
+              <p class="p1">{{item.gateName}}</p>
+            </view>
+            <view class="time">
+              <p class="p2">全周</p>
+              <p class="p3">入场时间{{item.startTime}}至{{item.stopTime}}</p>
+            </view>
+          </view>
+          <view class="purchase">
+            <view class="buyit">购票</view>
+            <view class="price">￥{{item.price}}</view>
+          </view>
+        </navigator>
+      </view>
+      </view>
+    </view>
+    <view wx:if="{{publicBlockList.length}}">
+      <view  wx:for="{{publicBlockList}}" wx:key='index'>
+        <view wx:if="{{globalData}}">
+         <navigator class="onlineticket" url="../sale/sale?id={{item.id}}&&shopId={{item.shopId}}&&ballCourtNumber={{item.ballCourtNumber}}&&name={{name1}}&&ballCourtNumber={{item.ballCourtNumber}}&&city={{shop.city}}" hover-class="none">
+            <view class="ticket">
+              <view class="group">
+                <image src="{{img7}}"></image>
+                <p class="p1">{{item.blockName}}</p>
+                <span class="order">订场</span>
+              </view>
+              <view class="time" wx:if="{{item.blockContent}}">
+                <p class="p3">{{item.blockContent}}</p>
+              </view>
+            </view>
+            <view class="purchase">
+              <view class="buyit">订场</view>
+              <view class="price">￥{{minPrice}}起</view>
+            </view>
+          </navigator>
+        </view>
+        <view wx:else>
+          <navigator class="onlineticket" url="../first/first" hover-class="none">
+            <view class="ticket">
+              <view class="group">
+                <image src="{{img7}}"></image>
+                <p class="p1">{{item.blockName}}</p>
+                <span class="order">订场</span>
+              </view>
+              <view class="time" wx:if="{{item.blockContent}}">
+                <p class="p3">{{item.blockContent}}</p>
+              </view>
+            </view>
+            <view class="purchase">
+              <view class="buyit">订场</view>
+              <view class="price">￥{{minPrice}}起</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 门店详情 -->
+  <view class="storedetail">
+    <view class="detail">门店详情:</view>
+    <view class="species" >
+      <view class="{{shop.supermarket ? 'shop':'shop1'}}">
+        <i class="iconfont icon-xiaomaibu"></i>
+        <span class="mall">小卖部</span>
+      </view>
+      <view class="{{shop.equipmentLease ? 'shop':'shop1'}}">
+        <i class="iconfont icon-swticonlanqiu"></i>
+        <span class="mall">设施租赁</span>
+      </view>
+      <view class="{{shop.wifi ? 'shop':'shop1'}}">
+        <i class="iconfont icon-wifi"></i>
+        <span class="mall">WIFI</span>
+      </view>
+      <view  class="{{shop.restroom ? 'shop':'shop1'}}">
+        <i class="iconfont icon-xishoujian"></i>
+        <span class="mall">洗手间</span>
+      </view>
+      <view  class="{{shop.parkingLot ? 'shop':'shop1'}}">
+        <i class="iconfont icon-tingchechang"></i>
+        <span class="mall">停车场</span>
+      </view>
+      <view class="shop" class="{{shop.bathroom ? 'shop':'shop1'}}">
+        <i class="iconfont icon-linyu"></i>
+        <span class="mall">淋浴室</span>
+      </view>
+      <view class="shop" class="{{shop.medical ? 'shop':'shop1'}}">
+        <i class="iconfont icon-tubiao22"></i>
+        <span class="mall">紧急医疗</span>
+      </view>
+      <view class="shop" class="{{shop.fitnessEquipment ? 'shop':'shop1'}}">
+        <i class="iconfont icon-jianshenfang2"></i>
+        <span class="mall">健身器材</span>
+      </view>
+        <view class="shop" class="{{shop.entertainment ? 'shop':'shop1'}}">
+        <i class="iconfont icon-huaban"></i>
+        <span class="mall">娱乐室</span>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 判断一下是否登录了 -->
+<view class="require require1" wx:if="{{isLogin}}" catchtouchmove='ture'>
+  <view class="obtain">
+    <view class="L_bind">
+      <view class="bind">请点击登录TeamU账号</view>
+      <button class="tieUp1 tieUp" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="border-radius:200rpx" disabled="{{disable}}">
+        <p>点击登录</p>
+      </button>
+    </view>
+  </view>
+</view>
+<!-- 获取手机号码 -->
+<view class="require" wx:if="{{isselected}}" catchtouchmove='ture'>
+  <view class="obtain">
+    <view class="L_bind">
+      <view class="bind">您所有购票记录将绑定在您的手机账号下</view>
+      <view class="bind">可以在TeamU APP内更改绑定手机号</view>
+      <button class="tieUp" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"  style="border-radius:200rpx">
+        <p>绑定微信手机号</p>
+      </button>
+    </view>
+  </view>
+</view>
+<div class="suspensionWindow"   bindtap="homePage">
+  <image src="../../image/first.png" class="pic1"></image>
+</div>
+<div class="suspensionWindow suspensionWindow1"  bindtap="admission">
+  <image src="../../image/ticket.png" class="pic1"></image>
+</div>
+

@@ -1,0 +1,139 @@
+page {
+  background:#F8F8F8;
+}
+.price,
+.available,
+.part,
+.ticket {
+  border-top:1rpx solid #F2F2F2;
+  border-bottom:1rpx solid #F2F2F2;
+  background:#FFFFFF;
+}
+.price {
+  font-size:30rpx;
+  text-align: center;
+  padding:10rpx 0;
+}
+.ticket {
+  margin-top:20rpx;
+  display:flex;
+  padding:30rpx;
+}
+.ticket .original {
+  flex:1;
+}
+.ticket .original .ticket1 {
+  font-size:32rpx;
+}
+.ticket .original .discount {
+  color:#2D2D2D;
+  font-size:26rpx;
+  margin-top:20rpx;
+  line-height:40rpx;
+  width:88%;
+}
+.ticket .tariff {
+  color:#67CD7A;
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+} 
+.available {
+  margin-top:20rpx;
+  font-size:26rpx;
+  padding:30rpx;
+  color:#111111;
+}
+.part {
+  margin-top:20rpx;
+  border-bottom:none;
+}
+.part .discount{
+  display:flex;
+  font-size:32rpx;
+  padding:25rpx 30rpx;
+  border-bottom:1rpx solid #F2F2F2;
+}
+.part .discount .choice {
+  display: flex;
+  align-items: center;
+}
+.part .discount .choice .portion {
+  display:flex;
+  font-size:24rpx;
+  align-items: center;
+  /* background: -webkit-linear-gradient(left,#F26F15,#FE3314); */
+  color:#fff;
+  padding:6rpx 15rpx;
+  border-radius:5rpx;
+  background: #E77F4E;
+}
+.part .discount .choice .portion p {
+  margin-left:12rpx;
+  white-space: 2rpx;
+}
+.part .discount .choice .portion image {
+  width:28rpx;
+  height:28rpx;
+}
+.part .discount .useit{
+  flex:1;
+}
+.part .discount .choice1 {
+  border:3rpx solid #BFBFBF;
+  border-radius: 6rpx;
+  padding:0 10rpx;
+}
+.part .discount .choice .p1 {
+  color:#A83032;
+}
+.part .discount .choice .icon-gengduo{
+  color:#999999;
+}
+.part .discount .choice image {
+  width:50rpx;
+  height:50rpx;
+}
+.part .discount .choice span {
+  margin:0 20rpx;
+}
+.part .discount .choice2 {
+  color:#CE2B2E;
+}
+.part .discount .choice2 .line1 {
+  text-decoration: line-through;
+  color:#9D9D9D;
+  font-size:26rpx;
+  margin-right: 8rpx;
+}
+.amount  {
+  position: fixed;
+  bottom:0rpx;
+  display:flex;
+  align-items: center;
+  width:100%;
+  background:#FFFFFF;
+  border-top:2rpx solid #F2F2F2;
+  padding:20rpx 0 50rpx 0;
+}
+.amount view:nth-child(1){
+  margin-left:30rpx;
+  width:60%;
+  font-size:36rpx;
+  color:#CE2B2E;
+}
+.amount view:nth-child(2) {
+  width:40%;
+  margin-right:30rpx;
+  font-size:32rpx;
+  color:#FFFFFF;
+  background:#33E7A0;
+  text-align: center;
+  padding:20rpx 0;
+  border-radius: 40rpx;
+}
+/* 模态框部分 */
+modal .fightfreely {
+  text-align: center;
+  color:#060606;
+}

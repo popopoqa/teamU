@@ -1,0 +1,16 @@
+<view wx:if="{{list.length}}">
+  <view class="coupon" wx:for="{{list}}" wx:key="index" disabled="true">
+    <view class="money">
+      <view>{{item.money}}元</view>
+      <view>满{{item.money}}减</view>
+    </view>
+    <view class="give">
+      <view>{{item.couponsName}}</view>
+      <view>{{item.shop.shopName}}</view>
+      <view>有效期：{{item.expiryTime}}</view>
+    </view>
+  </view>
+</view>
+<view wx:else class="temporary">
+  还没有开始使用呦~
+</view>

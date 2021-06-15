@@ -1,0 +1,22 @@
+<view wx:if="{{list.length}}">
+  <view class="orderInfo" wx:for="{{list}}" wx:key="index">
+    <image style="width:130rpx;height:80rpx" src="{{item.ballCourtImg}}"></image>
+    <view class="detail">
+      <view class="msg">
+        <view class="data" wx:if="item.discountContent">{{item.discountContent}}</view>
+        <view class="mall ball">球场：{{item.ballCourtName}}</view>
+        <view class="number ball" wx:if="{{item.count}}">购买数量：{{item.count}}</view>
+        <view class="Original ball" wx:if="{{item.discountTotalPrice}}">实付金额:{{item.discountTotalPrice}}元</view>
+        <view class="Original ball" wx:else>实付金额：{{item.totalPrice}}元</view>
+        <view class="discount ball" wx:if="{{item.discount}}">折扣金额：{{item.discount}}元</view>
+        <view class="discount ball" wx:else>折扣金额:未使用</view>
+        <view class="date1 ball">创建时间：{{item.createTime}}</view>
+        <view class="order ball">订单编号：{{item.outTradeNo}}</view>
+      </view>
+      <view class="complete">已完成</view>
+    </view>
+  </view>
+</view>
+<view class="empty" wx:else>
+  暂未生成订单
+</view>

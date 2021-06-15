@@ -1,0 +1,26 @@
+body {
+  position:relative;
+}
+.L_img {
+  position:absolute;
+  width:100%;
+}
+.L_img image {
+  width:120rpx;
+  height:120rpx;
+  display:block;
+  margin:0 auto;
+  margin-top:40%;
+}
+.position {
+  position: absolute;
+  top:75%;
+  width:100%;
+}
+.position button {
+  width:70%;
+  margin:0 auto;
+  background:#21C68A;
+  color:#fff;
+  font-size:30rpx;
+}

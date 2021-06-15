@@ -1,0 +1,136 @@
+<view wx:if="{{isAppear}}">
+  <view class="vessel">
+    <!-- 定位和搜索部分 -->
+    <view class="top">
+      <view wx:if="{{citySelected}}">
+        <view class="position" bindtap="openCityList" >{{citySelected}}</view>
+      </view>
+      <navigator class="search" url="../search/search?city={{citySelected}}" hover-class="none" >搜索附近的球场</navigator>
+    </view>
+    <!-- 轮播部分 -->
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-color="#B1A8A0" indicator-active-color="#FFFFFF">
+      <block wx:for="{{list}}" wx:key="index">
+        <navigator url="{{item.url}}" hover-class="none">
+          <swiper-item>
+            <image src="{{item.img}}" class="slide-image"  style="width:100%; height:160px;"/>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+    
+    <!-- 推荐球场部分 -->
+    <view class="recommend" >
+      <view class="court">推荐球场</view>
+      <!-- 球场优惠 -->
+      <view wx:if="{{stadiumList.length}}" class="L_distance">
+        <view class="introduce" wx:for="{{stadiumList}}" wx:key="index">
+          <navigator url="../storedetails/storedetails?shopId={{item.id}}" hover-class="none">
+            <image src="{{item.img}}"></image>
+            <view class="detail">
+              <view class="name">{{item.shopName}}</view>
+              <view class="price">
+                <span   wx:if="{{item.basketballMinPrice.minPriceType == 1 && item.basketballMinPrice.minPrice}}">{{item.basketballMinPrice.minPrice}}元/次</span>
+                <span wx:elif="{{item.basketballMinPrice.minPriceType == 3 && item.basketballMinPrice.minPrice}}">{{item.basketballMinPrice.minPrice}}元/年</span>
+                <span wx:elif="{{item.basketballMinPrice.minPriceType == 4 && item.basketballMinPrice.minPrice}}">{{item.basketballMinPrice.minPrice}}元/小时</span>
+                <span wx:elif="{{item.basketballMinPrice.minPriceType == 5 && item.basketballMinPrice.minPrice}}">{{item.basketballMinPrice.minPrice}}元/月</span>
+                <span wx:elif="{{item.basketballMinPrice.minPriceType == 6 && item.basketballMinPrice.minPrice}}">{{item.basketballMinPrice.minPrice}}元/季</span>
+                <span wx:elif="{{item.basketballMinPrice.minPriceType == 7 && item.basketballMinPrice.minPrice}}">{{item.basketballMinPrice.minPrice}}元/半年</span>
+                <span wx:else>暂无开启线上售票</span>
+              </view>
+              <view class="evaluate">
+                <view class="vip">
+                  <span wx:if="{{item.savingsCard || item.vip}}" class="savingsCard">会员</span>
+                  <span wx:if="{{item.block}}" class="block">包场</span>
+                  <span wx:if="{{item.activity}}" class="activity">满送</span>
+                </view>
+                <p>{{item.distance}}km</p>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <view class="court1" wx:else>暂无球场信息</view>
+    </view>
+  </view>
+  <view class="more" wx:if="{{stadiumList.length}}">暂无更多球场</view>
+
+  <!-- 微信授权登陆窗口部分 -->
+  <view class="showmodel" wx:if="{{isReceive}}">
+    <view class="coupon">
+      <view class="currency">
+        <image src="{{img4}}"></image>
+        <view class="redEnvelopes">
+          <view class="envelops">TeamU通用红包</view>
+          <view class="validity">有效期：{{time}}</view>
+        </view>
+        <view class="money">￥2</view>
+      </view>
+      <button class="confirm" bindtap="confirm">确定</button>
+    </view>
+  </view>
+</view>
+
+<!-- 城市列表部分 -->
+<view wx:else>
+  <view class='list-city'>
+    <scroll-view scroll-y="true" style="height:1500rpx;" scroll-into-view="{{scrollTopId}}" scroll-with-animation="true" enable-back-to-top="true">
+     <view class='item'>
+        <view class='fullname'>
+          <view class="city">
+            当前城市:
+          </view>
+          <view class="city1 hot-city" bindtap="currentCity" data-fullname="{{citySelected}}">{{citySelected}}</view>
+        </view>
+      </view>
+      <view class='item'>
+        <view class='fullname'>
+          <view class="city">
+            定位城市：
+          </view>
+          <view class="city1 hot-city" bindtap="locationCity" data-fullname="{{city}}" data-lat="{{lat}}" data-lng="{{lon}}">{{city}}</view>
+        </view>
+      </view>
+      <!-- 热门城市 -->
+      <view class='item' style="padding-bottom:25rpx;">
+        <view class='fullname'>
+            <view class="city">
+              热门城市
+            </view>
+            <view class="fullname hot-city" wx:for="{{hotCityData}}" wx:key="key" data-fullname="{{item.fullname}}" data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
+          </view>
+        </view>
+      </view>
+      <!-- 全部 -->
+      <view class='item' wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="group" wx:key="key">
+          <view class='py' id="{{idx}}">{{idx}}</view>
+          <view class="fullname" wx:for="{{group}}" wx:key="key" data-fullname="{{item.fullname}}" data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
+          </view>
+      </view>
+  </scroll-view>
+  <!-- 首字母 -->
+    <view class='city-py' bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+      <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}">{{item == 'hot' ? " " : item}}
+      </view>
+    </view>
+  </view>
+  <!-- 选择显示 -->
+  <view hidden="{{hidden}}" class="showPy">{{showPy == 'hot' ? " " : showPy}}</view>
+</view>
+
+<!-- 获取手机号码 -->
+<view class="require" wx:if="{{isselected}}" catchtouchmove='ture'>
+  <view class="obtain">
+    <view class="L_bind">
+      <view class="bind">您所有购票记录将绑定在您的手机账号下</view>
+      <view class="bind">可以在TeamU APP内更改绑定手机号</view>
+      <button class="tieUp" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"  style="border-radius:200rpx">
+        <p>绑定微信手机号</p>
+      </button>
+    </view>
+  </view>
+</view>
+<navigator class="suspensionWindow" bindtap="election"  hover-class="none" url="../public/public">
+  <image src="{{img2}}" class="pic1"></image>
+</navigator>
+
