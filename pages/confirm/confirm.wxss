@@ -1,0 +1,374 @@
+page {
+  background:#F8F8F8;
+  color:#0D0D0D;
+}
+.price,
+.available,
+.part,
+.ticket {
+  border-top:1rpx solid #F2F2F2;
+  border-bottom:1rpx solid #F2F2F2;
+  background:#FFFFFF;
+}
+.price {
+  font-size:30rpx;
+  text-align: center;
+  padding:10rpx 0;
+}
+/* 引入单选框 */
+.ticket {
+  background:#FFFFFF;
+}
+.ticket .alipay {
+  border-bottom:1rpx solid #F2F2F2;
+  padding:30rpx;
+  display: flex;
+  align-items: center;
+}
+.ticket .alipay .box {
+  flex:1;
+}
+.ticket .alipay .box .ticket1 {
+  font-size:32rpx;
+}
+.ticket .alipay .box .discount {
+  font-size:22rpx;
+  width:90%;
+}
+.years {
+  font-size:32rpx;
+  color:#47C864;
+}
+.box radio .wx-radio-input {
+  border:1rpx solid #000000;
+}
+.radio {
+  transform: scale(0.8)
+}
+.available {
+  padding:10rpx 30rpx;
+  margin-top:20rpx;
+}
+.available p:nth-child(1){
+  font-size:30rpx;
+}
+.available p:nth-child(2) {
+  font-size:28rpx;
+}
+.charge {
+  margin-top:20rpx;
+  background:#FFFFFF;
+  font-size:24rpx;
+  padding:20rpx 30rpx 10rpx 30rpx;
+}
+.charge .paragraph {
+  margin-top:10rpx;
+}
+.charge .paragraph {
+  line-height:35rpx;
+}
+.regular {
+  background:#FFFFFF;
+  margin-top:20rpx;
+}
+.regular .consumption {
+  font-size:30rpx;
+  padding:10rpx 30rpx;
+  border-bottom:1rpx solid #E1E1E1;
+}
+.regular .num {
+  display:flex;
+  justify-content: space-around;
+  padding:20rpx 0;
+} 
+.regular .minimum .mini {
+  font-size:30rpx;
+}
+.regular .minimum .tariff {
+  font-size:32rpx;
+  text-align: center;
+  padding-top:10rpx;
+  color:#000000;
+}
+.part {
+  margin-top:20rpx;
+  border-bottom:none;
+}
+.part .discount{
+  display:flex;
+  font-size:32rpx;
+  padding:25rpx 30rpx;
+  border-bottom:1rpx solid #F2F2F2;
+}
+.part .discount .choice {
+  display: flex;
+  align-items: center;
+}
+.part .discount .useit{
+  flex:1;
+}
+.part .discount .choice1 {
+  border:3rpx solid #BFBFBF;
+  border-radius: 6rpx;
+  padding:0 10rpx;
+}
+.part .discount .choice span {
+  margin:0 20rpx;
+}
+.part .discount .choice .portion {
+  display:flex;
+  font-size:24rpx;
+  align-items: center;
+  color:#fff;
+  padding:6rpx 15rpx;
+  border-radius:5rpx;
+  background: #E77F4E;
+}
+.part .discount .choice .portion p {
+  margin-left:12rpx;
+  white-space: 2rpx;
+}
+.part .discount .choice .portion image {
+  width:28rpx;
+  height:28rpx;
+}
+.part .discount:nth-last-child(1) {
+  margin-bottom:120rpx;
+}
+.part .discount .useit{
+  flex:1;
+}
+.part .discount .choice .num {
+  color:#A83032;
+}
+.part .discount .choice .deselect {
+  font-size:26rpx;
+}
+.part .discount .choice .icon-gengduo{
+  color:#999999;
+}
+.part .discount .choice image {
+  width:50rpx;
+  height:50rpx;
+}
+.part .discount .choice2 span {
+  font-size:26rpx;
+}
+.part .discount .choice2 .before {
+  text-decoration:line-through;
+}
+.part .discount .choice2 .after{
+  color:#CE2B2E;
+  margin-left:15rpx;
+}
+.part .discount .choice2 .after1 {
+  text-decoration: line-through;
+  margin:0;
+  color:#A7A7A7;
+}
+.amount  {
+  position: fixed;
+  bottom:0;
+  display:flex;
+  align-items: center;
+  width:100%;
+  background:#FFFFFF;
+  border-top:2rpx solid #F2F2F2;
+  padding:20rpx 0 20rpx 0;
+  z-index:100;
+}
+.amount view:nth-child(1){
+  margin-left:30rpx;
+  width:60%;
+  font-size:36rpx;
+  color:#CE2B2E;
+}
+.amount view:nth-child(2) {
+  width:40%;
+  margin-right:30rpx;
+  font-size:32rpx;
+  color:#FFFFFF;
+  background:#33E7A0;
+  text-align: center;
+  padding:20rpx 0;
+  border-radius: 35rpx;
+}
+.triangle {
+  position:absolute;
+  width:30rpx;
+  height:30rpx;
+  right:50rpx;
+  bottom:-12rpx;
+  rotate:45deg;
+  background:#FFFFFF;
+}
+.mongolia {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000000;
+  opacity: 0.30;
+  filter: alpha(opacity=70);
+}
+.card {
+  position:relative;
+}
+.card .money {
+  background:#FFFFFF;
+  display:flex;
+  align-items: center;
+  padding:10rpx 30rpx;
+ 
+}
+.card .money .count {
+  font-size:32rpx;
+  flex:1;
+}
+.card .money .number {
+  display:flex;
+  align-items: center;
+}
+.card .money .number p{
+  font-size:28rpx;
+  color:#CE2B2E;
+}
+.card .money .number i {
+  font-size:28rpx;
+}
+.card .options {
+  position:absolute;
+  bottom:60rpx;
+  right:30rpx;
+  background:#FFFFFF;
+  font-size:30rpx;
+  background:#FFFFFF;
+  border-radius:15rpx;
+  z-index:100;
+  width:60%;
+  text-align: left;
+  padding:10rpx 0 0 30rpx;
+}
+.card .options:before {
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+  border:20rpx solid transparent;
+  position:absolute;
+  right:30rpx;
+  border-top:20rpx solid #FFFFFF;
+  bottom:-30rpx;
+}
+.card .options .individuals .class1 {
+  height:15rpx;
+  line-height:15rpx;
+  padding:20rpx 0;
+}
+.card .options .individuals .class2 {
+  display:none;
+}
+
+/* 选择充值金额 */
+.delivery radio .wx-radio-input {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  border:none;
+  background-color:transparent;
+}
+.delivery radio .wx-radio-input.wx-radio-input-checked {
+  opacity: 0;
+} 
+.delivery radio .wx-radio-input.wx-radio-input-checked::before {
+  font-size: 0rpx;
+}
+.boxs {
+  width:100%;
+  margin-top:30rpx;
+}
+.boxs .pop{
+ display:inline-flex;
+ white-space:nowrap;
+}
+.boxs radio  {
+  position: relative;
+  width:200rpx;
+  height:260rpx;
+  margin-left:30rpx;
+}
+.boxs radio .case {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.boxs radio .large {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+.boxs radio .large .upper {
+  height:79rpx;
+  font-size:28rpx;
+  color:#4C4C4C;
+  line-height: 80rpx;
+  text-align:center;
+  border-bottom:3rpx solid#D1D1D1;
+}
+.boxs radio .red .upper{
+  border-bottom:7rpx solid #51D1B7;
+}
+.boxs radio .large .lower {
+  height:180rpx;
+  text-align:center;
+  line-height: 175rpx;
+}
+.boxs radio .large .lower .logo {
+  font-size:28rpx;
+}
+.boxs radio .large .lower .number {
+  font-size:60rpx;
+  font-weight: bold;
+}
+.boxs radio .case .box .charge1{
+  color:#2D2D2D;
+  font-size:24rpx;
+}
+.boxs radio .case .box .money1{
+  color:#000;
+  margin-left:5rpx;
+  font-size:48rpx;
+}
+.boxs radio .wx-radio-input{
+  width:200rpx;
+  height:260rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+}
+.boxs radio .wx-radio-input.wx-radio-input-checked::before{
+  font-size: 0rpx;
+  color:#fff; 
+  background-color: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.boxs radio .wx-radio-input.wx-radio-input-checked {
+  background:#DDFFF0 !important;
+  border:7rpx solid #51D1B7 !important;
+  box-shadow:0rpx 5rpx 5rpx 0rpx #B5EEDD !important;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+

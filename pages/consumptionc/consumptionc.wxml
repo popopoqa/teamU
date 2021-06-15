@@ -1,0 +1,12 @@
+<view class="container" wx:for="{{walletRecords}}" wx:key="index">
+  <view class="name">{{item.shopName}} - {{item.content}}</view>
+  <view class="time">
+    <view class="date">
+      <p>{{item.maxtime}}</p>
+      <p>{{item.mintime}}</p>
+    </view>
+    <view class="mon">
+      {{item.price}}元
+    </view>
+  </view>
+</view>

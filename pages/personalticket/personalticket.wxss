@@ -1,0 +1,192 @@
+page {
+  background:#ECF1F7;
+}
+.members {
+  color:#FFFFFF;
+  background: -webkit-linear-gradient(left,#B5E1F6,#76B2EE);
+  display: flex;
+  height:180rpx;
+  padding-top:20rpx;
+  margin:30rpx 30rpx 0 30rpx;
+  border-radius:20rpx;
+}
+.members .card {
+  margin-left:30rpx;
+  flex:1
+}
+.members .card .vip {
+  font-size:32rpx;
+}
+.members .card .test {
+  font-size:28rpx;
+  margin-top:40rpx;
+}
+.members .photo {
+  padding:8rpx;
+  background:#FFFFFF;
+  width:200rpx;
+  height:120rpx;
+  margin-right:20rpx;
+}
+.members .photo image {
+  width:200rpx;
+  height:120rpx;
+  margin-right:30rpx;
+}
+/* 会员卡部分 */
+.container {
+  background:#FFFFFF;
+  border-radius:20rpx;
+  margin:0 30rpx;
+  padding:30rpx 0;
+}
+.container .card {
+  display: flex;
+  align-items: center;
+  margin-left:30rpx;
+}
+.container .card .cd{
+  width:20rpx;
+  height:20rpx;
+  background:#FF5000;
+  border-radius:50%;
+}
+.container .card p {
+  font-size:30rpx;
+  margin-left:20rpx;
+  color:#FF5200;
+}
+.container .code  {
+  margin-top:20rpx;
+  position: relative;
+}
+.container .code .L_container  {
+  position: absolute;
+  color:#EB0205;
+  right:160rpx;
+  top:0;
+}
+.container .code .L_container i {
+  font-size:250rpx;
+}
+.container .code canvas{
+  display: block;
+  margin:0 auto;
+}
+.container .code  .text {
+  text-align: center;
+  color:#6B6B6B;
+  font-size:28rpx;
+  margin-top:0;
+}
+/* 统计部分 */
+.statistics {
+  background:#FFFFFF;
+  border-radius:20rpx;
+  margin:0 30rpx;
+  border-top:1rpx solid #F2F2F2;
+  display:flex;
+  color:#6D6D6D;
+  align-items: center;
+  padding:20rpx 0;
+}
+.statistics  .test {
+  width:80%;
+  padding-left:20rpx;
+}
+.statistics  .test .census {
+  font-size:32rpx;
+}
+.statistics  .test  .address {
+  font-size:26rpx;
+  margin-top:10rpx;
+}
+.statistics .icon {
+  display:flex;
+  width:20%;
+  justify-content: flex-end;
+  padding-right:20rpx;
+}
+.statistics .icon i {
+  color:#6FC9A6;
+  font-size:40rpx;
+}
+.statistics1 {
+  align-items: flex-start;
+}
+.statistics1 .number {
+  color:#EB0205;
+  font-size:28rpx;
+}
+.statistics2 .test{
+  width:100%;
+}
+.share {
+  background: #FF4500;
+  color:#F7FFF9;
+  width:35%;
+  font-size:26rpx;
+  border-radius: 40rpx;
+  padding:5rpx 0;
+  margin-top:30rpx;
+  margin-bottom: 30rpx;
+}
+.brake {
+  width:50%;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-around;
+  font-size:24rpx
+}
+.brake view{
+   padding:5rpx 10rpx;
+   border-radius:25rpx;
+}
+.brake .true {
+  color:#FFFFFF;
+  background:#00C679;
+}
+.brake .false {
+  color:#696969;
+  background:#EEEEEE;
+}
+/* 遮盖层 */
+.L_cover {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.2)
+}
+.poster {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:1000000;
+}
+.shareCanvas {
+  display:block;
+  width:600rpx;
+  height:600rpx;
+  margin:0 auto;
+  margin-top:30%;
+} 
+.poster button {
+  width:55%;
+  font-size:30rpx;
+  margin-top:0%;
+}
+.poster .icon {
+  display:block;
+  color:#fff;
+  text-align: center;
+  margin-top:30rpx;
+}
+.poster .icon i {
+  font-size:55rpx;
+}
+

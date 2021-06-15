@@ -1,0 +1,127 @@
+page {
+  background:#F8F8F8;
+}
+.coupon {
+  background:#FFFFFF;
+  margin:30rpx 30rpx 0 30rpx;
+  padding:30rpx;
+  border-radius:12rpx;
+}
+.coupon .money {
+  float:left;
+  color:#69C57A;
+  border-right: 1rpx solid #C4C4C4;
+  margin-right:10rpx;
+  padding:20rpx 0;
+  text-align: center;
+  width:130rpx;
+}
+.coupon>.money>view {
+  font-size:32rpx;
+}
+.coupon>.money>view:nth-child(2) {
+  font-size:26rpx;
+  margin-top:20rpx;
+}
+.give {
+  margin-left:155rpx;
+}
+.coupon .give view:nth-child(1) {
+  font-size:32rpx;
+}
+.coupon .give view {
+  margin-top:10rpx;
+  font-size:26rpx;
+  display:flex;
+  align-items: center;
+}
+.coupon .give view span {
+  margin-left:30rpx;
+  font-size:24rpx;
+  color:#DE151D;
+}
+.more {
+  background:#FFFFFF;
+  width:60%;
+  font-size:24rpx;
+  color:#676767;
+  padding:20rpx 10rpx;
+  border:1rpx solid #F2F2F2;
+  text-align: center;
+  display:block;
+  margin:0 auto;
+  margin-top:50rpx;
+}
+.bottom {
+  background:#FFFFFF;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:140rpx;
+}
+.bottom .history {
+  margin-top:20rpx;
+  width:80%;
+  border-radius:50rpx;
+  background:#26C58F;
+  color:#D8FCF1;
+  font-size:30rpx;
+}
+.fightfreely {
+  text-align: center;
+}
+
+/* 模态框部分 */
+.L-model {
+  position: fixed;
+  top:0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.4);
+}
+.L-model .background {
+  background:#FFFFFF;
+  position: absolute;
+  width:70%;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:0 auto;
+  margin-top:300rpx;
+  font-size:32rpx;
+  height:267rpx;
+  border-radius: 8rpx;
+}
+.L-model .background .toused {
+  text-align: center;
+  padding-top:30rpx;
+}
+.L-model .background .sure {
+  font-size:30rpx;
+}
+.L-model .button {
+  display:flex;
+  border-top:1rpx solid #E7E7E7;
+  height:80rpx;
+  line-height:80rpx;
+  margin-top:40rpx;
+  color:#999999;
+}
+.L-model .button .cancel {
+  width:50%;
+  text-align: center;
+}
+.L-model .button .cancel1 {
+  border-right: 1rpx solid #E7E7E7;
+}
+.L-model .button button {
+  background: none;
+  color:#3DC01A;
+}
+.L-model .button button::after {
+  border:none;
+}
+

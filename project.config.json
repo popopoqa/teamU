@@ -1,0 +1,248 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": false,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": false,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.3.0",
+  "appid": "wx03a11e51a87d8fff",
+  "projectname": "teamu",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "球场",
+          "pathName": "pages/index/index",
+          "query": "球场",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登录",
+          "pathName": "pages/first/first",
+          "query": "球场",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "个人",
+          "pathName": "pages/personal/personalcenter/personalcenter",
+          "query": "球场",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "门票",
+          "pathName": "pages/personal/admissionTicket/admissionTicket",
+          "query": "球场",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "城市列表部分",
+          "pathName": "pages/cityList/cityList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "优惠券",
+          "pathName": "pages/coupon/coupon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "个人",
+          "pathName": "pages/personal/admissionTicket/admissionTicket",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "优惠券",
+          "pathName": "pages/personal/coupon/coupon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "创建订单",
+          "pathName": "pages/confirm/confirm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "订单确认",
+          "pathName": "pages/confirm/confirm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "畅打票",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "场地",
+          "pathName": "pages/sale/sale",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "二维码",
+          "pathName": "pages/code/code",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "地图",
+          "pathName": "pages/map/map",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "order",
+          "pathName": "pages/personal/reimburburse/reimburburse",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "优惠券",
+          "pathName": "pages/coupons/coupons",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 16,
+          "name": "pages/public/public",
+          "pathName": "pages/public/public",
+          "query": "公众号",
+          "scene": 1047
+        },
+        {
+          "id": -1,
+          "name": "手机登录",
+          "pathName": "pages/second/second",
+          "query": "公众号",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "记录",
+          "pathName": "pages/records/records",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "门店",
+          "pathName": "pages/storedetails/storedetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "订单",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "获取定位",
+          "pathName": "pages/allocation/allocation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "jstx",
+          "pathName": "pages/jstx/jstx",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "系统消息",
+          "pathName": "pages/xtxx/xtxx",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "会员卡",
+          "pathName": "pages/confirm/confirm",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

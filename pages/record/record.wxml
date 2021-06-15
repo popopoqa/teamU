@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="tabNav">
+    <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}">
+    <text>{{item}}</text>
+    </view>
+  </view>
+  <view class="box" wx:if="{{list.length}}">
+    <view class="record" wx:for="{{list}}" wx:key="index">
+      <view class="msg">
+        <p class="p1">{{item.ballCourtName}}</p>
+        <p class="p2">{{item.createTime}}</p>
+      </view>
+      <view class="message">
+        <p class="card">{{item.name}}</p>
+        <p class="experience">经验+{{item.exp}}</p>
+        <p class="integral">积分+{{item.count}}</p>
+      </view>
+    </view>
+  </view>
+  <view class="container111" wx:else>
+    <view class="body">
+      暂无{{name}}信息
+    </view>
+  </view>
+</view>

@@ -1,0 +1,99 @@
+<view class="history-ticket-container">
+  <!-- 顶部banner部分  -->
+  <view class="history-ticket-banner">
+    <view class="history-ticket-left">
+      <view class="history-ticket-type" wx:if="{{ballCourtTicketDto.ballCourtType == '1'}}">{{ballCourtTicketDto.ticketName}}</view>
+      <view class="history-ticket-type" wx:if="{{ballCourtTicketDto.ballCourtType == '2'}}">{{ballCourtTicketDto.ballCourtName}}-{{ballCourtTicketDto.ticketName}}</view>
+      <view wx:if="{{blockList.length}}">
+        <view class="history-ticket-time">
+          包场时间：{{blockList[0].time}}
+        </view>
+        <view class="history-ticket-time"> {{blockList[0].startTime}} - {{blockList[0].stopTime}} 
+         
+          <text> {{blockList[0].basketryName}}</text>
+        </view>
+      </view>
+      <view  class="{{(ballCourtTicketDto.ballCourtType == '1') ? 'history-ticket-name' : 'history-ticket-name history-ticket-distance'}}">{{ballCourtTicketDto.ballCourtName}}</view>
+    </view>
+    <view class="history-ticket-right">
+      <image src="{{ballCourtTicketDto.ballCourtImg}}" alt=""/>
+    </view>
+  </view>
+  <!-- 门票二维码区域 -->
+  <view class="history-qrCode-area">
+    <view class="history-ticket-text">
+      <view class="history-ticket-circular"></view>
+      <view class="history-ticket-word" wx:if="{{ballCourtTicketDto.ballCourtType == '3'}}">会员卡</view>
+      <view class="history-ticket-word" wx:else >门票</view>
+    </view>
+    <view class="history-qrcode">
+      <view class="history-gate-qrcode">闸机二维码</view>
+      <view class="history-reception-qrcode">前台二维码</view>
+    </view>
+    <view class="history-qrCode-box">
+      <view class="history-used-pic">
+        <image src="../../../image/used.png"s></image>
+      </view>
+      <image src="../../../image/qrCode.png"></image>
+      <view class="history-qrcode-number">{{ballCourtTicketDto.ticketNo}}</view>
+    </view>
+  </view>
+  <!-- 订单详情部分 -->
+  <view class="history-order-detail">
+    <view class="history-order-left">
+      <view class="history-order-name">{{ballCourtTicketDto.shopName}}</view>
+      <view class="history-order-address">{{ballCourtTicketDto.shopAddress}}</view>
+    </view>
+    <view class="history-order-right" bindtap="callphone">
+      <i class="iconfont icon-dianhua1"></i>
+    </view>
+  </view>
+  <view class="history-order-detail" wx:if="{{ballCourtTicketDto.ballCourtType != '3'}}">
+    <view class="history-order-left">
+      <view class="history-order-name">实付金额
+        <text style="float:right;color:#ff7f27">{{ballCourtTicketDto.totalPrice}}元</text>
+      </view>
+      <view class="history-order-address" wx:if="{{ballCourtTicketDto.ballCourtType == '1' || ballCourtTicketDto.ballCourtType == '2'}}">订单编号：{{ballCourtTicketDto.orderNo}}</view>
+      <view class="history-order-address" wx:else>订单编号：{{ballCourtTicketDto.ticketNo}}</view>
+      <view class="history-order-address" wx:if="{{ballCourtTicketDto.ballCourtType == '1' || ballCourtTicketDto.ballCourtType == '2'}}">购买时间：{{ballCourtTicketDto.createTime}}</view>
+      <view class="history-order-address" wx:else>购买时间：{{ballCourtTicketDto.time}}</view>
+    </view>
+  </view>
+  <view class="history-order-detail" wx:if="{{ballCourtTicketDto.ballCourtType != '3'}}">
+    <view class="history-order-left">
+      <view class="history-order-name">说明</view>
+      <view class="history-order-address" wx:if="{{ballCourtTicketDto.ballCourtType == '1'}}">
+        到球场出示此页面二维码完成验证，可截图转让或分享，一张门票仅可使用一次
+      </view>
+      <view class="history-order-address" wx:if="{{ballCourtTicketDto.ballCourtType == '2'}}">
+        截图分享给朋友或球场出示此页面二维码完成验证，同一场地最多容纳20人，开场前30分钟有效，有效时间过后失效
+      </view>
+    </view>
+  </view>
+  <!-- 会员卡部分 -->
+  <view wx:if="{{ballCourtTicketDto.ballCourtType == '3'}}">
+    <view class="history-order-detail">
+      <text class="history-term-validity">畅打有效期</text>
+      <text  class="history-term-validity history-term-open">未开通</text>
+    </view>
+    <view class="history-order-detail">
+      <text class="history-term-validity">余额</text>
+      <text  class="history-term-validity" style="text-align:right">{{balance}}元</text>
+    </view>
+    <view class="history-order-detail" style="display:block;">
+      <view class="history-order-record">消费记录</view>
+      <view style=" height:800rpx;overflow: auto;">
+        <view class="history-record-content" wx:for="{{walletRecords}}" wx:key="index">
+          <view class="history-record-left">
+            <view class="history-record-test">{{item.shopName}}</view>
+            <view class="history-record-time">{{item.recordTime}}</view>
+          </view>
+          <view class="history-record-right">
+            {{item.price}}元
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>

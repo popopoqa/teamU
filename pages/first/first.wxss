@@ -1,0 +1,46 @@
+.bg1 {
+  width:100%;
+}
+.bg1 image{
+  width:180rpx;
+  height:180rpx;
+  display:block;
+  margin:0 auto;
+  margin-top:150rpx;
+  border-radius:8%;
+}
+.model {
+  position: fixed;
+  padding:50rpx 0 50rpx 0;
+  left:0;
+  bottom:200rpx;
+  width:100%;
+  z-index:100;
+  color:#FFFFFF;
+}
+ button {
+  background:#47D09E;
+  color:#FFFFFF;
+  width:70%;
+  font-size:32rpx;
+  border:none;
+}
+.title {
+  margin-top:25rpx;
+  font-size:38rpx;
+  color:#47D09E;
+  letter-spacing: 2rpx;
+} 
+.buyit {
+  width:100%;
+  text-align: center;
+  margin-top:10rpx;
+}
+
+.company {
+  position:fixed;
+  bottom:100rpx;
+  width:100%;
+  text-align:center;
+  color:#D8D8D8;
+}

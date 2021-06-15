@@ -1,0 +1,171 @@
+<view class="price">会员卡</view>
+<view class='cover2'>
+  <view class="card">
+    <!-- 修改充值会员卡部分 -->
+    <view class="ticket">
+      <radio-group bindchange="radioChange2">
+        <label class="alipay" wx:if="{{publicVip}}">
+          <view class="box">
+            <view class="ticket1">包年会员卡</view>
+            <view class="discount">
+              年卡有效期为购买日期365天，入场前出示会员二维码扫码入场，已充值的会员卡优先使用年卡入场
+            </view>
+          </view>
+          <radio class="radio" value="包年" checked/>
+        </label>
+        <label class="alipay">
+          <view class="box">
+            <view class="ticket1">充值会员卡</view>
+            <view class="discount">
+              充值卡可用于直接消费，入场前出示二维码入场，余额低于最低消费时需要再次充值才可入场
+            </view>
+          </view>
+          <radio class="radio" value="充值" checked/>
+        </label>
+      </radio-group>
+    </view>
+    <!-- 获取年卡部分 -->
+    <scroll-view class="boxs" scroll-X="true" wx:if="{{pack}}">
+      <view class="pop"> 
+          <radio-group class="radio-group1" bindchange="radioChange1">
+          <label class="radio" wx:for="{{publicVipDetails}}" wx:key="index">
+            <radio value="{{index}},{{item.discountPrice}},{{item.price}},{{item.type}},{{item.vipName}},{{item.vipContent}}" wx:if="{{item.opened}}">
+              <view class="large {{_index==index? 'red':''}}">
+                <view class="upper" wx:if="{{item.type == 1}}">30天</view>
+                <view class="upper" wx:if="{{item.type == 2}}">90天</view>
+                <view class="upper" wx:if="{{item.type == 3}}">180天</view>
+                <view class="upper" wx:if="{{item.type == 4}}">360天</view>
+                <view class="lower">
+                  <p class="logo">￥</p>
+                  <p class="number">{{item.price}}</p>
+                </view>
+              </view>
+            </radio>
+          </label>
+        </radio-group>
+      </view>
+    </scroll-view>
+    <scroll-view class="boxs" scroll-X="true" wx:if="{{invest}}">
+      <view class="pop">
+         <radio-group class="radio-group1" bindchange="radioChange">
+          <label class="radio" wx:for="{{publicSavingsCardActivity}}" wx:key="index">
+            <radio value="{{item.satisfyMoney}},{{item.giveMoney}}" wx:if="{{item.satisfyMoney > 0}}">
+              <view class="case">
+                <view class="box">
+                  <p class="charge1">充</p>
+                  <p class="money1">{{item.satisfyMoney}}</p>
+                </view>
+                <view class="box" wx:if="{{item.giveMoney}}">
+                  <p class="charge1">送</p>
+                  <p class="money1">{{item.giveMoney}}</p>
+                </view>
+              </view>
+            </radio>
+          </label>
+        </radio-group>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 可用时间 -->
+  <view class="available">
+    <p>提示：</p>
+    <p>该门店下所有球场可用</p>
+  </view>
+  <!-- 会员充值部分 -->
+  <view class="charge" wx:if="{{publicSavingsCard}}">
+    <view class="explain">充值会员卡说明：</view>
+    <view class="paragraph">
+      充值会员卡消费按照可享受比临时购票更优惠价格，入场时出示会员卡二维码扫码入场，以每分钟为计算单位，按照门店 设定价格扣除卡内的余额。不同球场拥有不同的最低消费和消费上限，如果出门忘记扫码立场，则按照球场的消费上限扣除。充值卡可用于购买和支付门店的商品。一旦购买成功不可退款，但可转让会员卡给其他用户。
+    </view>
+  </view>
+  <view class="charge" wx:elif="{{publicVip}}">
+    <view class="explain">包年年卡说明：</view>
+    <view class="paragraph">
+      确认购买日期起365天有效，入场前出示二维码入场，离场时无需再次扫码确认，一天可多次进入球场，一单购买不可退款货转让。
+      <view>
+      年卡会员得二维码为动态二维码，无法通过截图得形式转让，持有年卡得用户如果在短时间内多次换手机登录，系统可能会被冻结 年卡账护一段时间（冻结不会影响普通门票/包场门票和充值会员卡）
+      </view>
+    </view>
+  </view>
+  <!-- 商家消费规则 -->
+  <view class="regular" wx:if="{{publicSavingsCard}}">
+    <view class="consumption">
+      商家消费规则
+    </view>
+    <view class="num">
+      <view class="minimum"> 
+        <view class="mini">最低消费</view>
+        <view class="tariff">{{publicSavingsCard.minConsume}}元</view>
+      </view>
+      <view class="minimum"> 
+        <view class="mini">每小时消费</view>
+        <view class="tariff">{{publicSavingsCard.hourlyPrice}}元</view>
+      </view>
+      <view class="minimum"> 
+        <view class="mini">消费上限</view>
+        <view class="tariff">{{publicSavingsCard.maxConsume}}元</view>
+      </view>
+    </view>
+  </view>
+  <!-- 付款部分 -->
+  <view class="part">
+    <!-- 使用优惠券 -->
+    <navigator class="discount" url="../coupons/coupons" hover-class="none" open-type="redirect">
+      <view class="useit">使用抵扣券</view>
+      <view class="choice">
+        <view class="portion">
+          <image src="../../image/wallet.png"></image>
+          <p>{{availableCoupons}}个可用</p>
+        </view>
+        <i class="iconfont icon-gengduo"></i>
+      </view>
+    </navigator>
+    <!-- 付款方式 -->
+    <view class="discount">
+      <view class="useit">付款方式</view>
+      <view class="choice">
+        <image src="{{img1}}"></image>
+      </view>
+    </view>
+    <!-- 购买数量 -->
+    <view class="discount" wx:if="{{pack}}">
+      <view class="useit">购买数量</view>
+      <view class="choice choice1">
+        <i bindtap="reduce" class="iconfont icon-jian"></i>
+        <span>{{nums}}</span>
+        <i bindtap="plus" class="iconfont icon-jia"></i>
+      </view>
+    </view>
+    <view class="discount">
+      <view class="useit">账户现余额</view>
+      <view wx:if="{{balance > 0}}">
+        <view class="choice">￥{{balance}}</view>
+      </view>
+      <view wx:else>
+        <view class="choice">￥0.00</view>
+      </view>
+    </view>
+    <view class="discount">
+      <view class="useit">充值后余额</view>
+      <view class="choice choice2" wx:if="{{total}}">￥{{total}}</view>
+      <view class="choice choice2" wx:else></view>
+    </view>
+    <!-- 订单总计 -->
+    <view class="discount">
+      <view class="useit">订单合计</view>
+      <view class="choice choice2" wx:if="{{actual}}">
+        <span class="after1" wx:if="{{pack}}">￥{{total}}</span>
+        <span class="after">￥{{actual}}</span>
+      </view>
+      <view class="choice choice2" wx:else>
+        <span class="after">￥0</span>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="mongolia" wx:if="{{issend}}" bindtap="disappear"></view>
+<view class="amount">
+  <view wx:if="{{actual}}">￥{{actual}}</view>
+  <view wx:else>￥0</view>
+  <view bindtap="payment">立即支付</view>
+</view>

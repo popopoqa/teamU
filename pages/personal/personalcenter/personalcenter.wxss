@@ -1,0 +1,135 @@
+.top {
+  height:210rpx;
+  background: #3F3F3F;
+}
+.top .message {
+  color:#FFFFFF;
+  margin:0 30rpx 0 30rpx;
+  padding-top:30rpx;
+}
+.top .message .msg {
+  display: flex;
+  align-items: center;
+}
+.top .message .msg .icon {
+  border-radius: 50%;
+  width:90rpx;
+  height:90rpx;
+  background:#D3D3D3;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+.top .message .msg .infor {
+  font-size:28rpx;
+  margin-left:20rpx;
+}
+.top .message .msg .icon  i {
+  font-size:58rpx;
+  color:#E6E6E6;
+}
+.top .message .msg .photo {
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+  margin-right:30rpx;
+}
+.top .message .msg .info {
+  width:70%;
+}
+.top .message .msg .info .name {
+  font-size:36rpx;
+}
+.top .message .msg .info .number {
+  font-size:26rpx;
+  margin-top:15rpx;
+}
+.top .message .msg i {
+  font-size:45rpx;
+}
+.top .message .level {
+  margin-top:30rpx;
+  display:flex;
+}
+.top .message .level .grade{
+  float:left;
+  margin-right:30rpx;
+  font-size:28rpx;
+}
+.top .message .level  .progress {
+  width:80%;
+}
+.top .message .level  .progress progress {
+  width:63%;
+  float:left;
+  margin-right:30rpx;
+  margin-top:10rpx;
+}
+.top .message .level  .progress .percent {
+  font-size:26rpx;
+}
+.top .message .level  .progress .percent span {
+  margin-left:12rpx;
+} 
+.top .message .msg .icons {
+  color:#fff;
+}
+.top .message .msg .icons i {
+  font-size:36rpx;
+}
+.column {
+  border-bottom:1rpx solid #E1E1E1;
+  padding:10rpx 30rpx 25rpx 30rpx;
+}
+.column .part {
+  display:inline-block;
+  text-align: center;
+  width:25%;
+}
+.column .part .number {
+  color:#1EC826;
+}
+.column .part .name {
+  color:#8A8A8A;
+  font-size:28rpx;
+  margin-top:5rpx;
+}
+.column .part i {
+  color:#000000;
+  font-size:38rpx;
+}
+.coupon {
+  display:flex;
+  padding:0 30rpx;
+  height:100rpx;
+  align-items: center;
+  border-bottom:1rpx solid #E1E1E1;
+}
+.coupon1 {
+  padding:0;
+  padding-left:30rpx;
+}
+.coupon1 .discount p {
+  margin-left:10rpx;
+}
+.coupon button {
+  background: none;
+}
+.coupon button::after {
+  border:0;
+}
+.coupon .discount {
+  flex:1;
+  color:#5F5D60;
+}
+.coupon .discount p{
+  font-size:30rpx;
+}
+.coupon .discount .icon-youhuiquan {
+  font-size:36rpx;
+  margin-right:20rpx;
+  color:#46444D;
+}
+.coupon .icon-gengduo{
+  color:#615D64;
+}

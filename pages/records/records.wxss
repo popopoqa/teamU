@@ -1,0 +1,42 @@
+.L_container .L_image {
+  text-align:center;
+  margin-top:220rpx;
+}
+.L_container .L_image i{
+  color:#35E4A4;
+  font-size:200rpx;
+}
+.L_container .L_word {
+  text-align:center;
+  margin-top:30rpx;
+  color:#4AD860;
+  font-weight: bold;
+  font-size: 44rpx;
+}
+.L_box {
+  margin-top:60rpx;
+}
+.L_experience {
+  text-align: center;
+  margin-top:10rpx;
+}
+.L_ticket {
+  width:90%;
+  margin:0 auto;
+  margin-top:80rpx;
+  display:flex;
+  justify-content: space-around;
+  
+}
+.L_ticket button {
+  width:42%;
+  border-radius:20rpx;
+}
+.L_ticket .L_look {
+  color:#fff;
+  background:#33E6A2;
+}
+.L_ticket .L_return {
+  background: none;
+  border:2rpx solid #000;
+}

@@ -1,0 +1,34 @@
+.orderInfo {
+  display: flex;
+  font-size:24rpx;
+  margin:0 30rpx;
+  padding:10rpx 0;
+  border-top:1rpx solid #F8F8F8;
+}
+.orderInfo .detail {
+  display:flex;
+  align-items: center;
+  color:#717171;
+  flex:1;
+  margin-left:10rpx;
+}
+.orderInfo .detail .msg {
+  flex:1;
+}
+.orderInfo .detail .msg .ball {
+  margin-top:10rpx;
+}
+.orderInfo .detail .msg .data {
+  font-size:30rpx;
+} 
+.orderInfo .detail .complete {
+  color:#79F384;
+  font-size:28rpx;
+} 
+.empty {
+  width:100%;
+  text-align: center;
+  margin-top:600rpx;
+  color:#717171;
+  font-size:26rpx;
+} 

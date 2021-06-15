@@ -1,0 +1,20 @@
+<view wx:if="{{list.length}}">
+  <view class="coupon" wx:for="{{list}}" wx:key="index">
+    <view class="flex">
+      <view class="money">
+        <view class="view">{{item.money}}元</view>
+        <view class="view">满{{item.satisfyMoney}}减</view>
+      </view>
+      <view class="give">
+        <view class="send">{{item.satisfyMoney }}元门票优惠券</view>
+        <view class="send">Teamu测试球场</view>
+        <view class="send">有效期：{{item.validityTime}}</view>
+      </view>
+    </view>
+    <view wx:if="{{isShow}}" class="receive" bindtap="getCoupons" data-id="{{item.id}}">领取</view>
+    <view wx:else class="receive colorful">已领取</view>
+  </view>
+</view>
+<view wx:else class="temporary">
+  暂时没有优惠券啊~
+</view>

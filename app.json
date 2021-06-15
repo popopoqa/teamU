@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/first/first",
+    "pages/public/public",
+    "pages/consumptionc/consumptionc",
+    "pages/packageyard/packageyard",
+    "pages/reservedPacking/reservedPacking",
+    "pages/record/record",
+    "pages/personalticket/personalticket",
+    "pages/membership/membership",
+    "pages/confirm/confirm",
+    "pages/personal/historicalCoupons/historicalCoupons",
+    "pages/sale/sale",
+    "pages/storedetails/storedetails",
+    "pages/personal/personalcenter/personalcenter",
+    "pages/personal/coupon/coupon",
+    "pages/search/search",
+    "pages/order/order",
+    "pages/coupons/coupons",
+    "pages/coupon/coupon",
+    "pages/personal/reimburburse/reimburburse",
+    "pages/personal/admissionTicket/admissionTicket",
+    "pages/records/records",
+    "pages/allocation/allocation",
+    "pages/history/historyTicket/historyTicket",
+    "pages/history/historyList/historyList"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": " "
+    }
+  },
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#716F70",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "球场",
+        "iconPath": "image/img6.png",
+        "selectedIconPath": "image/img5.png"
+      },
+      {
+        "pagePath": "pages/personal/admissionTicket/admissionTicket",
+        "text": "门票",
+        "iconPath": "image/img4.png",
+        "selectedIconPath": "image/img3.png"
+      },
+      {
+        "pagePath": "pages/personal/personalcenter/personalcenter",
+        "text": "个人",
+        "iconPath": "image/img2.png",
+        "selectedIconPath": "image/img1.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+<view class="search">
+  <i class="iconfont icon-search"></i>
+  <input placeholder="输入关键字搜索" bindinput ="shopName"/>
+</view>
+<view class="box" wx:if="{{list.length}}">
+  <view class="container" wx:for="{{list}}" wx:key="index">
+    <!-- 门店部分 -->
+    <navigator class="park" url="../storedetails/storedetails?shopId={{item.shopId}}" hover-class="none">
+      <span class="basketball">{{item.name}}</span>
+      <span class="mall" wx:if="{{item.basketballCourtNumber == null}}">门店</span>
+    </navigator>
+  </view>
+</view>

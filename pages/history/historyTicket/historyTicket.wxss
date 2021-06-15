@@ -1,0 +1,154 @@
+page {
+  background: #ecf1f6;
+}
+.history-ticket-banner {
+  display: flex;
+  margin: 20rpx 30rpx 0 30rpx;
+  background:linear-gradient(to right, #a6b1b3,#7a838c);
+  border-radius: 15rpx;
+  padding: 20rpx 25rpx;
+}
+.history-ticket-left {
+  flex:1;
+  color: #fff;
+}
+.history-ticket-type {
+  font-size: 30rpx;
+}
+.history-ticket-time {
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.history-ticket-name {
+  font-size: 26rpx;
+  margin-top: 80rpx;
+}
+.history-ticket-distance {
+  margin-top: 20rpx;
+}
+.history-ticket-right image {
+  width:200rpx;
+  height:150rpx;
+  border:10rpx solid #fff
+}
+.history-qrCode-area {
+  background: #fff;
+  border-radius: 25rpx;
+  margin: 0 30rpx;
+  padding-bottom: 30rpx;
+} 
+.history-ticket-text {
+  display: flex;
+  align-items: center;
+  color: #ec652c;
+  font-size: 28rpx;
+  padding: 15rpx 0 0 30rpx;
+}
+.history-ticket-circular {
+  width: 10rpx;
+  height: 10rpx;
+  background:#ec652c;
+  border-radius: 10rpx;
+  margin-right: 15rpx;
+}
+.history-qrcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.history-gate-qrcode,
+.history-reception-qrcode {
+  font-size: 26rpx;
+  background: #e7e5e5;
+  color: #7e7b7b;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+}
+.history-gate-qrcode {
+  margin-right: 20rpx;
+}
+.history-qrCode-box {
+  text-align: center;
+  position: relative;
+}
+.history-qrCode-box image {
+  width:460rpx;
+  height:460rpx;
+  opacity:0.5;
+}
+.history-qrcode-number {
+  margin-top: -50rpx;
+  z-index: 100;
+  font-size: 26rpx;
+}
+.history-used-pic {
+  position: absolute;
+  top: 0;
+  right: 150rpx;
+  z-index: 1000;
+}
+.history-used-pic image {
+  width: 250rpx;
+  height: 250rpx;
+  opacity: 1;
+}
+.history-order-detail {
+  margin-top: 4rpx;
+  background: #fff;
+  margin: 4rpx 30rpx 0 30rpx;
+  display: flex;
+  align-items: center;
+  padding: 15rpx 20rpx;
+}
+.history-order-left {
+  flex: 7;
+  line-height: 45rpx;
+  color: #6c6c6c;
+}
+.history-order-name {
+  font-size: 32rpx;
+}
+.history-order-address {
+  font-size: 28rpx;
+}
+.history-order-right {
+  flex: 2;
+  text-align: right;
+  color: #bbbbbb;
+}
+.history-order-right i {
+  font-size: 50rpx;
+  color: #ff7f27;
+}
+.history-term-validity {
+  color: #6c6c6c;
+  font-size: 32rpx;
+  flex: 1;
+}
+.history-term-open {
+  color: #ff7f27;
+  text-align: right;
+}
+.history-order-record {
+  text-align: center;
+  color: #6c6c6c;
+  font-size: 32rpx;
+}
+.history-record-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c6c6c;
+  padding:10rpx 0;
+}
+.history-record-left {
+  flex: 1;
+  line-height: 45rpx;
+}
+.history-record-test {
+  font-size: 28rpx;
+}
+.history-record-right,
+.history-record-time {
+  font-size:26rpx;
+}

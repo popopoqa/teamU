@@ -1,0 +1,28 @@
+<view class="L_bcg">
+  <view class="title">也可前去公众号下载app</view>
+  <official-account></official-account>
+</view>
+<view class="coupon" wx:for="{{list}}" wx:key="index" bindtap="confirm">
+  <view class="money" wx:if="{{item.satisfyMoney}}">
+    <view>{{item.money}}元</view>
+    <view>满{{item.satisfyMoney}}减</view>
+  </view>
+  <view class="money" wx:else>
+    <view>{{item.money}}元</view>
+    <view>满{{item.money}}减</view>
+  </view>
+  <view class="give">
+    <view>
+      <p>{{item.couponsName}}</p>
+    </view>
+    <view>{{item.shop.shopName}}</view>
+    <view>有效期：{{item.expiryTime}}</view>
+  </view>
+</view>
+
+
+<modal hidden="{{hiddenmodalput}}" title="登录" confirm-text="是" cancel-text="否" bindcancel="cancelL" bindconfirm="confirmL" wx:if="{{isShow}}">
+  <view class="text" style="text-align:center">还没有登录呦，是否前往登录？</view>
+</modal>
+
+

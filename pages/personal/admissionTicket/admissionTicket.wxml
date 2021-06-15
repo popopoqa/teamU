@@ -1,0 +1,78 @@
+<view class="container" wx:if="{{globalData}}">
+  <view class="tabNav">
+    <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}">
+    <text>{{item}}</text>
+    </view>
+  </view>
+  <view class="orderInfo">
+    <view class="orderInfo-item">
+      <!-- 获取门票 -->
+      <view wx:if="{{list.length}}">
+        <view class="sceneInformation" wx:for="{{list}}" wx:key="index" wx:for-index="bdindex">
+          <view class="msg">
+            <view class="test">
+              <image src="{{item.businessLicense}}"></image>
+              <view class="name">{{item.shopName}}</view>
+            </view>
+            <view class="distance">{{item.distance}}</view>
+          </view>
+          <!-- 包场票 -->
+          <view class="openTime" wx:if="{{item.blockList}}">
+            <view wx:for="{{item.blockList}}" wx:key="index">
+              <navigator class="workingDay" url="../../packageyard/packageyard?shopId={{list[bdindex].id}}&&type=2&&blockNo={{item.blockNo}}">
+                <view class="box">
+                  <view class="workday">111-下午工作日</view>
+                  <view class="time">入场时间：周一到周五15：00至23：00</view>
+                </view>
+                <view class="package admissionTicket">包场</view>
+              </navigator>
+            </view>  
+          </view>
+          <!-- 门票 -->
+          <view class="openTime" wx:if="{{item.ticketList}}">
+            <view wx:for="{{item.ticketList}}" wx:key="index">
+              <navigator  class="workingDay"  url="../../personalticket/personalticket?shopId={{item.shopId}}&&type=1&&ticketNo={{item.ticketNo}}">
+                <view class="box">
+                  <view class="workday">{{item.name}}</view>
+                  <view class="time">入场时间:{{item.describe}}</view>
+                </view>
+                <view class="admissionTicket">门票</view>
+              </navigator>
+            </view>
+          </view>
+          <!-- vip -->
+          <view class="openTime" wx:if="{{item.vipList}}">
+            <navigator class="workingDay" url="../../membership/membership?shopId={{item.vipList.shopId}}&&type=3&&vipId={{item.vipList.id}}&&cardNumber={{item.vipList.cardNumber}}">
+              <view class="box">
+                <view class="workday">会员卡</view>
+                <view class="time" wx:if="{{item.vipList.balance}}">余额：{{item.vipList.balance}}</view>
+                <view class="time">有效期：{{item.vipList.endTime}}</view>
+              </view>
+              <view class="member admissionTicket" >会员</view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+      <view wx:else class="tickets">
+        暂无门票
+      </view>
+    </view> 
+  </view>
+</view>
+<view class="container" wx:else>
+  <navigator class="L_container" url="../../first/first" hover-class="none" open-type="redirect">
+    <view class="bcg">
+      <image src="../../../image/xcx.png"></image>
+    </view>
+    <view class="L_lookup">您还没有登录，请登录后查看门票</view>
+    <button class="L_login">登录</button>
+  </navigator>
+</view>
+
+<navigator class="suspensionWindow" hover-class="none" url="../coupon/coupon">
+  <image src="{{img1}}" class="pic1"></image>
+</navigator>
+<navigator class="suspensionWindow suspensionWindow1" hover-class="none" url="../../history/historyList/historyList">
+  <image src="{{img2}}" class="pic1"></image>
+</navigator>
+

@@ -1,0 +1,66 @@
+<view class="top">
+  <!-- 个人信息部分 -->
+  <view class="message">
+    <view class="msg" wx:if="{{globalData}}">
+      <image class="photo" src="{{user.img}}"></image>
+      <view class="info">
+        <view class="name">{{user.nickName}}</view>
+      </view>
+    </view>
+    <view class="msg" wx:else>
+      <view class="icon">
+        <navigator url="../../first/first" hover-class="none" open-type="redirect"><i class="iconfont icon-icontouxiang"></i></navigator>
+      </view>
+      <view class="infor">
+        <view class="name">尚未授权登录</view>
+      </view>
+    </view>
+    <view class="level" wx:if="{{globalData}}">
+      <view class="grade">Lv.{{configLV.lv}}</view>
+      <view class="progress">
+        <progress percent='{{percent}}' stroke-width='8' backgroundColor='#242424' activeColor='#2995FB' style='border-radius:100rpx;overflow:hidden'></progress>
+        <view class="percent">XP<span>{{configLV.startExp}}/{{configLV.stopExp}}</span></view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="column">
+  <view class="part">
+    <view class="number" wx:if="{{globalData}}">{{user.score}}</view>
+    <view class="number" wx:else>0</view>
+    <view class="name">积分</view>
+  </view>
+  <view class="part">
+     <navigator url="../../record/record" hover-class="none">
+      <i class="iconfont icon-wancheng"></i>
+      <view class="name">入场记录</view>
+    </navigator>
+  </view>
+  <view class="part" bindtap="model">
+    <i class="iconfont icon-tuikuan"></i>
+    <view class= "name">退款/售后</view>
+  </view>
+  <view class="part">
+    <navigator  url="../reimburburse/reimburburse" hover-class="none">
+      <i class="iconfont icon-dingdan"></i>
+      <view class="name">全部订单</view>
+    </navigator>
+  </view>
+</view>
+<view>
+  <navigator class="coupon" url="../coupon/coupon" hover-class="none">
+    <view class="discount">
+      <i class="iconfont icon-youhuiquan"></i>
+      <p>优惠券</p>
+    </view>
+    <i class="iconfont icon-gengduo"></i>
+  </navigator>
+</view>
+<navigator class="coupon" url="../../public/public" hover-class="none">
+  <view class="discount">
+    <i class="iconfont icon-APPtuisong"></i>
+    <p>下载app查看个人集锦</p>
+  </view>
+  <i class="iconfont icon-gengduo"></i>
+</navigator>
+

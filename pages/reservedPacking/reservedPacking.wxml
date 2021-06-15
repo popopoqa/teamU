@@ -1,0 +1,57 @@
+<view ></view>
+<view class="price">预定包场</view>
+<view class="pay">请在{{minutes}} {{sec}}内支付</view>
+<!-- 原价门票 -->
+<view class="ticket">
+  <view class="original">
+    <view class="ticket1">原价包场门票</view>
+    <view class="discount">
+    无优惠包场门票，入场前出示二维码扫码后入场，原始门票购买时无经验加成，可购票。
+    </view>
+  </view>
+  <view class="tariff">{{options.totalmoney}}元</view>
+</view>
+<!-- 可用时间 -->
+<view class="available">
+  <view class="msg">
+    <view class='msg1'>包场信息</view>
+    <view class="container">
+      <view class="time">{{curtime}}</view>
+      <view class="time1">
+        <view class="number2" wx:for="{{page.basketballCourtBlock}}" wx:key="index">
+          <view class="name">{{item.array}} {{item.startTime}} - {{item.stopTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 付款部分 -->
+<view class="part">
+  <!-- 使用优惠券 -->
+  <navigator class="discount" url="../coupons/coupons" hover-class="none"  open-type="redirect">
+    <view class="useit">使用抵扣券</view>
+    <view class="choice">
+      <view class="portion">
+        <image src="../../image/wallet.png"></image>
+        <p>{{availableCoupons}}个可用</p>
+      </view>
+      <i class="iconfont icon-gengduo"></i>
+    </view>
+  </navigator>
+  <!-- 付款方式 -->
+  <view class="discount">
+    <view class="useit">付款方式</view>
+    <view class="choice">
+      <image src="{{img1}}"></image>
+    </view>
+  </view>
+  <!-- 订单总计 -->
+  <view class="discount">
+    <view class="useit">订单合计</view>
+    <view class="choice choice2">￥{{options.totalmoney}}</view>
+  </view>
+</view>
+<view class="amount">
+  <view class="money">￥{{options.totalmoney}}</view>
+  <view bindtap="payment">立即支付</view>
+</view>

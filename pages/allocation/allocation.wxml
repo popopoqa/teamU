@@ -1,0 +1,7 @@
+
+<view class="L_img">
+  <image src="../../image/position.png"></image>
+</view>
+<view class="position">
+    <button open-type="openSetting" bindopensetting="handler" bindtap="click">打开定位</button>
+</view>

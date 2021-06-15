@@ -1,0 +1,14 @@
+<view class="L_container">
+  <view class="L_image">
+    <i class="iconfont icon-chenggong"></i>
+  </view>
+  <view class="L_word">购买成功</view>
+</view>
+<view class="L_box">
+  <view class="L_experience">经验 +{{exp}}</view>
+  <view class="L_experience">积分 +{{score}}</view>
+</view>
+<view class="L_ticket">
+  <button class="L_look" bindtap="lookit">查看门票</button>
+  <button class="L_return" bindtap="return1">返回首页</button>
+</view>
